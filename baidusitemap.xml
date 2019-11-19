@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sunxz007.github.io/demo/demo/</loc>
-    <lastmod>2019-11-18</lastmod>
+    <loc>https://sunxz007.github.io/home/</loc>
+    <lastmod>2019-11-19</lastmod>
+  </url>  <url>
+    <loc>https://sunxz007.github.io/web/es/%E6%95%99%E7%A8%8B1/</loc>
+    <lastmod>2019-11-19</lastmod>
+  </url>  <url>
+    <loc>https://sunxz007.github.io/web/es/%E6%95%99%E7%A8%8B2/</loc>
+    <lastmod>2019-11-19</lastmod>
+  </url>  <url>
+    <loc>https://sunxz007.github.io/web/html/%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2019-11-19</lastmod>
   </url>  <url>
     <loc>https://sunxz007.github.io/demo/hello-world/</loc>
-    <lastmod>2019-11-18</lastmod>
-  </url>  <url>
-    <loc>https://sunxz007.github.io/home/</loc>
-    <lastmod>2019-11-18</lastmod>
+    <lastmod>2019-11-19</lastmod>
   </url>
 </urlset>

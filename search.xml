@@ -4,13 +4,88 @@
   
     
     <entry>
-      <title>home</title>
+      <title>目录测试2</title>
+      <link href="/web/es/%E6%95%99%E7%A8%8B2/"/>
+      <url>/web/es/%E6%95%99%E7%A8%8B2/</url>
+      
+        <content type="html"><![CDATA[<h2>二级类目测试</h2><h3>这是三级类目</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+          <category> es </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>目录测试1</title>
+      <link href="/web/es/%E6%95%99%E7%A8%8B1/"/>
+      <url>/web/es/%E6%95%99%E7%A8%8B1/</url>
+      
+        <content type="html"><![CDATA[<p>这是一个测试</p><h2>demo</h2><p>这里是耳机类目</p><a id="more"></a><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>www.baidu.com<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h3>demo1</h3><p>这里是三级类目</p><p>测试不通过</p><h2>demo2</h2><p>这里是二级，怎么没卵用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+          <category> es </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> demo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>目录测试</title>
+      <link href="/web/html/%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/"/>
+      <url>/web/html/%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h2>二级类目测试</h2><h3>这是三级类目</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+          <category> html </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试页面</title>
       <link href="/home/"/>
       <url>/home/</url>
       
-        <content type="html"><![CDATA[<h1>demo</h1><p>啥反反复复</p><h2>dems</h2><a id="more"></a><p>啥也没有</p><h3>demd</h3><p>sssd</p><h2>demods</h2><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello world'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
+        <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><p>Elegant in code, simple in core</p></blockquote></p><a id="more"></a><p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hello world'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> demo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -24,35 +99,6 @@
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2>Quick Start</h2><h3>Create a new post</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3>Run server</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3>Generate static files</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3>Deploy to remote sites</h3><p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>demo</title>
-      <link href="/demo/demo/"/>
-      <url>/demo/demo/</url>
-      
-        <content type="html"><![CDATA[<p>这是一个测试</p><h2>demo</h2><p>这里是耳机类目</p><a id="more"></a><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span>&gt;</span>www.baidu.com<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h3>demo1</h3><p>这里是三级类目</p><p>测试不通过</p><h2>demo2</h2><p>这里是二级，怎么没卵用</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> demo </category>
-          
-          <category> demo2 </category>
-          
-          <category> demo3 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> demo </tag>
-            
-        </tags>
       
     </entry>
     
