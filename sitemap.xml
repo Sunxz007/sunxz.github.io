@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunxz007.github.io/note/index.html</loc>
+    
+    <lastmod>2019-11-20T06:02:08.408Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunxz007.github.io/schedule/index.html</loc>
     
     <lastmod>2019-11-19T13:43:40.091Z</lastmod>
@@ -30,16 +37,9 @@
   </url>
   
   <url>
-    <loc>https://sunxz007.github.io/web/es/index.html</loc>
+    <loc>https://sunxz007.github.io/note/web/index.html</loc>
     
     <lastmod>2019-11-19T09:04:26.107Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunxz007.github.io/web/index.html</loc>
-    
-    <lastmod>2019-11-19T08:29:28.097Z</lastmod>
     
   </url>
   
