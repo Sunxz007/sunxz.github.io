@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sunxz007.github.io/log/</loc>
+    <loc>https://sunxz007.github.io/demo1/</loc>
     
-    <lastmod>2019-11-20T12:43:39.934Z</lastmod>
+    <lastmod>2019-11-20T15:11:48.348Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/demo2/</loc>
+    
+    <lastmod>2019-11-20T15:11:34.246Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://sunxz007.github.io/hello-world/</loc>
     
-    <lastmod>2019-11-20T12:02:09.910Z</lastmod>
+    <lastmod>2019-11-20T15:08:10.909Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/log/</loc>
+    
+    <lastmod>2019-11-20T14:48:32.628Z</lastmod>
     
   </url>
   
