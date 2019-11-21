@@ -595,6 +595,32 @@ window.addEventListener('pjax:success', () => {
       });
   </script>
 
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JmkyYGuszFYPB3Hb4vnIVS9u-gzGzoHsz',
+    appKey: 'wu7SUP1saOKsN7jHyEM4G4FD',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -609,6 +635,7 @@ window.addEventListener('pjax:success', () => {
         flOptions.networks = "Weibo,Wechat,Douban,Twitter,Facebook,Linkedin,GooglePlus,GoogleBookmarks,Evernote";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
+
     </div>
 </body>
 </html>

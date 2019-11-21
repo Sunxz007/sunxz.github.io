@@ -294,7 +294,21 @@
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
-            </span><br>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/hello-world/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hello-world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -385,11 +399,36 @@
 
           </div>
           
-    
-  <div class="comments" id="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYwMi8yNDEwMg=="></div>
-  </div>
-  
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="comments"></div>
+            </div>
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+        </div>
+      </div>
+      <script>
+        window.addEventListener('tabs:register', () => {
+          let activeClass = 'valine';
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          if (activeClass) {
+            let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+            if (activeTab) {
+              activeTab.click();
+            }
+          }
+        });
+        window.addEventListener('tabs:click', event => {
+          let commentClass = event.target.classList[1];
+          localStorage.setItem('comments_active', commentClass);
+        });
+      </script>
 
         </div>
           
@@ -678,18 +717,31 @@ window.addEventListener('pjax:success', () => {
       });
   </script>
 
+
 <script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JmkyYGuszFYPB3Hb4vnIVS9u-gzGzoHsz',
+    appKey: 'wu7SUP1saOKsN7jHyEM4G4FD',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
 </script>
 <div id="needsharebutton-float">
       <span class="btn">
@@ -705,6 +757,24 @@ window.addEventListener('pjax:success', () => {
         flOptions.networks = "Weibo,Wechat,Douban,Twitter,Facebook,Linkedin,GooglePlus,GoogleBookmarks,Evernote";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'a3afa871ca807a03434d',
+      clientSecret: '4728e0079557b173fafc73b10c5a47702b9c9a4e',
+      repo: 'sunxz007.github.io',
+      owner: 'Sunxz007',
+      admin: ['Sunxz007'],
+      id: '8bce20f2201bdf5289459c13c9cf5987',
+        language: 'zh-CN',
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
     </div>
 </body>
 </html>
