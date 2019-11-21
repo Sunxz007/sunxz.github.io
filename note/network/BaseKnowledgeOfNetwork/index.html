@@ -48,18 +48,26 @@
   };
 </script>
 
-  <meta name="description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：">
-<meta name="keywords" content="前端,EcmaScript,ES6,类型判断">
+  <meta name="description" content="# 一、计算机网络发展的7个阶段# 第一阶段：批处理阶段  批处理(Batch Processing)系统的出现是为了方便多人使用统一计算机而设计的。主要过程就是把卡带插入读卡机，计算机读取并计算，最后把结果通过打印机输出。 批处理系统示意图    早期的计算机体积大，价格昂贵，通常只能在固定的场所使用，而且操作复杂，实际运行的时候有专门的操作员来处理。计算机效率地下需要等待几天才能来取。因此，批">
+<meta name="keywords" content="网络,基础,OSI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6中的数据类型判断">
-<meta property="og:url" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;note&#x2F;web&#x2F;ecmascript&#x2F;es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD&#x2F;index.html">
+<meta property="og:title" content="计算机网络常识">
+<meta property="og:url" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;note&#x2F;network&#x2F;BaseKnowledgeOfNetwork&#x2F;index.html">
 <meta property="og:site_name" content="孙小丢&#39;s Blog">
-<meta property="og:description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：">
+<meta property="og:description" content="# 一、计算机网络发展的7个阶段# 第一阶段：批处理阶段  批处理(Batch Processing)系统的出现是为了方便多人使用统一计算机而设计的。主要过程就是把卡带插入读卡机，计算机读取并计算，最后把结果通过打印机输出。 批处理系统示意图    早期的计算机体积大，价格昂贵，通常只能在固定的场所使用，而且操作复杂，实际运行的时候有专门的操作员来处理。计算机效率地下需要等待几天才能来取。因此，批">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-21T13:04:50.439Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E6%89%B9%E5%A4%84%E7%90%86.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E5%88%86%E6%97%B6%E7%B3%BB%E7%BB%9F.jpeg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1.jpeg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E4%B8%8D%E5%90%8C%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E7%9A%84%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.jpeg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E4%BA%92%E8%81%94%E7%BD%91%E7%A4%BA%E6%84%8F%E5%9B%BE.jpeg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E4%BA%92%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E4%B8%BA%E4%B8%AD%E5%BF%83.jpeg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;OSI%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:updated_time" content="2019-11-21T16:17:52.471Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;network&#x2F;%E6%89%B9%E5%A4%84%E7%90%86.png">
 
-<link rel="canonical" href="https://sunxz007.github.io/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/">
+<link rel="canonical" href="https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/">
 
 
 <script id="page-configurations">
@@ -86,7 +94,7 @@
   padding: 0 10px 0 14px;
 }
 </style>
-  <title>ES6中的数据类型判断 | 孙小丢's Blog</title>
+  <title>计算机网络常识 | 孙小丢's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152837031-1"></script>
     <script pjax>
@@ -255,7 +263,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sunxz007.github.io/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/">
+    <link itemprop="mainEntityOfPage" href="https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -268,7 +276,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          ES6中的数据类型判断
+          计算机网络常识
         </h2>
 
         <div class="post-meta">
@@ -278,14 +286,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-19 15:18:52" itemprop="dateCreated datePublished" datetime="2019-11-19T15:18:52+08:00">2019-11-19</time>
+              <time title="创建时间：2019-11-21 19:20:52" itemprop="dateCreated datePublished" datetime="2019-11-21T19:20:52+08:00">2019-11-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-21 21:04:50" itemprop="dateModified" datetime="2019-11-21T21:04:50+08:00">2019-11-21</time>
+                <time title="修改时间：2019-11-22 00:17:52" itemprop="dateModified" datetime="2019-11-22T00:17:52+08:00">2019-11-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,20 +301,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/EcmaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">EcmaScript</span>
-                  </a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/EcmaScript/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机网络</span>
                   </a>
                 </span>
             </span>
@@ -327,8 +323,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/#comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" itemprop="commentCount"></span>
+    <a title="valine" href="/note/network/BaseKnowledgeOfNetwork/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/note/network/BaseKnowledgeOfNetwork/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -338,14 +334,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -357,92 +353,90 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="es6中的数据类型判断的几种方式"><a class="header-anchor" href="#es6中的数据类型判断的几种方式"># </a>ES6中的数据类型判断的几种方式</h2><h3 id="1-typeof"><a class="header-anchor" href="#1-typeof"># </a>1.typeof</h3><p>typeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：</p><a id="more"></a>
+        <h2 id="一-计算机网络发展的7个阶段"><a class="header-anchor" href="#一-计算机网络发展的7个阶段"># </a>一、计算机网络发展的7个阶段</h2><h3 id="第一阶段：批处理阶段"><a class="header-anchor" href="#第一阶段：批处理阶段"># </a>第一阶段：批处理阶段</h3><p>  批处理(Batch Processing)系统的出现是为了方便多人使用统一计算机而设计的。主要过程就是把卡带插入读卡机，计算机读取并计算，最后把结果通过打印机输出。</p><blockquote>
+<p>批处理系统示意图</p>
+</blockquote><p><img src="/assets/network/%E6%89%B9%E5%A4%84%E7%90%86.png" alt="批处理" title="批处理示意图"><br>
+  早期的计算机体积大，价格昂贵，通常只能在固定的场所使用，而且操作复杂，实际运行的时候有专门的操作员来处理。计算机效率地下需要等待几天才能来取。因此，批处理主要用于大规模的计算和处理，只有少数人和部门才能使用。</p><a id="more"></a>
 
 
-<ul>
-<li>number、</li>
-<li>boolean、</li>
-<li>symbol、</li>
-<li>string、</li>
-<li>object、</li>
-<li>undefined、</li>
-<li>function 等。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">''</span>; <span class="comment">// string 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// number 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(); <span class="comment">// symbol 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//boolean 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">//undefined 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> [] ; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// function 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//object 无效</span></span><br></pre></td></tr></table></figure>
-<p><strong>总结：</strong></p>
-<ul>
-<li>对于基本类型，除 null 以外，均可以返回正确的结果。</li>
-<li>对于引用类型，除 function 以外，一律返回 object 类型。</li>
-<li>对于 null ，返回 object 类型。</li>
-<li>对于 function 返回 function 类型。</li>
-</ul>
-<h3 id="2-instanceof"><a class="header-anchor" href="#2-instanceof"># </a>2.instanceof</h3>
-<ul>
-<li>instanceof 检测的是原型对象。</li>
-<li>instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B。</li>
-<li>如果 A 是 B 的实例，则返回 true,否则返回 false。</li>
-<li>当 A 的 <strong>proto</strong> 指向 B 的 prototype 时，就认为 A 就是 B 的实例</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">// true</span></span><br><span class="line">&#123;&#125; <span class="keyword">instanceof</span> <span class="built_in">Object</span>;<span class="comment">// true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>() <span class="keyword">instanceof</span> <span class="built_in">Date</span>;<span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">new</span> Person() <span class="keyword">instanceof</span> Person;</span><br><span class="line"></span><br><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// true</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>() <span class="keyword">instanceof</span> <span class="built_in">Object</span>;<span class="comment">// true</span></span><br><span class="line"><span class="keyword">new</span> Person <span class="keyword">instanceof</span> <span class="built_in">Object</span>;<span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<p>原型链举例</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[].__proto__ --&gt; <span class="built_in">Array</span>.prototype</span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.prototype.__proto__ --&gt; <span class="built_in">Object</span>.prototype</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ --&gt;<span class="literal">null</span></span><br></pre></td></tr></table></figure>
-<p><strong>问题总结：</strong></p>
-<ul>
-<li>instanceof 只能用来判断两个对象是否属于实例关系，而不能判断一个对象实例具体属于哪种类型。</li>
-<li>它假定只有一个全局执行环境。如果网页中包含多个框架，那实际上就存在两个以上不同的全局执行环境，从而存在两个以上不同版本的构造函数。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">'iframe'</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line">xArray = <span class="built_in">window</span>.frames[<span class="number">0</span>].Array;</span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> xArray(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">// [1,2,3]</span></span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>ES5 提供了 Array.isArray() 方法 。该方法用以确认某个对象本身是否为 Array 类型，而不区分该对象在哪个环境中创建。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(value))&#123;</span><br><span class="line">   <span class="comment">//对数组执行某些操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Array.isArray() 本质上检测的是对象的 [[Class]] 值，[[Class]] 是对象的一个内部属性，里面包含了对象的类型信息，其格式为 [object Xxx] ，Xxx 就是对应的具体类型 。对于数组而言，[[Class]] 的值就是 [object Array] 。</p>
-<h3 id="3-constructor"><a class="header-anchor" href="#3-constructor"># </a>3.constructor</h3>
-<ul>
-<li>当一个函数 F被定义时，JS引擎会为F添加 prototype 原型，然后再在 prototype上添加一个 constructor 属性，并让其指向 F 的引用</li>
-<li>当执行 var f = new F() 时，F 被当成了构造函数，f 是F的实例对象，此时 F 原型上的 constructor 传递到了 f 上，因此 f.constructor == F</li>
-<li>F 利用原型对象上的 constructor 引用了自身，当 F 作为构造函数来创建对象时，原型上的 constructor 就被遗传到了新创建的对象上， 从原型链角度讲，构造函数 F 就是新对象的类型。这样做的意义是，让新对象在诞生以后，就具有可追溯的数据类型。</li>
-</ul>
-<p><strong>注意：</strong></p>
-<ul>
-<li>null 和 undefined 是无效的对象，因此是不会有 constructor 存在的，这两种类型的数据需要通过其他方式来判断。</li>
-<li>函数的 constructor 是不稳定的，这个主要体现在自定义对象上，当开发者重写 prototype 后，原有的 constructor 引用会丢失，constructor 会默认为 Object</li>
-</ul>
-<h3 id="4-tostring"><a class="header-anchor" href="#4-tostring"># </a>4.toString</h3>
-<ul>
-<li>toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。这是一个内部属性，其格式为 [object Xxx] ，其中 Xxx 就是对象的类型。</li>
-<li>对于 Object 对象，直接调用 toString()  就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。</li>
-</ul>
- <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">''</span>) ;   <span class="comment">// [object String]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">1</span>) ;    <span class="comment">// [object Number]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>) ; <span class="comment">// [object Boolean]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>()); <span class="comment">//[object Symbol]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>) ; <span class="comment">// [object Undefined]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>) ; <span class="comment">// [object Null]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Function</span>()) ; <span class="comment">// [object Function]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>()) ; <span class="comment">// [object Date]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call([]) ; <span class="comment">// [object Array]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">RegExp</span>()) ; <span class="comment">// [object RegExp]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Error</span>()) ; <span class="comment">// [object Error]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">document</span>) ; <span class="comment">// [object HTMLDocument]</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">window</span>) ; <span class="comment">//[object global] window 是全局对象 global 的引用</span></span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a class="header-anchor" href="#总结"># </a>总结</h2>
-<p><strong>typeof：</strong></p>
-<ul>
-<li>可判断
-<ul>
-<li>数值</li>
-<li>字符串</li>
-<li>布尔值</li>
-<li>undefined</li>
-<li>function</li>
-</ul>
-</li>
-<li>不可判断
-<ul>
-<li>null</li>
-<li>object</li>
-<li>array</li>
-</ul>
-</li>
-</ul>
-<p><strong>instance：</strong></p>
-<ul>
-<li>判断对象具体类型</li>
-</ul>
-<p><strong>全等于：</strong></p>
-<ul>
-<li>null/undefined</li>
-</ul>
+
+
+<h3 id="第二阶段：分时系统"><a class="header-anchor" href="#第二阶段：分时系统"># </a>第二阶段：分时系统</h3>
+<p>  分时系统(TSS:Time Sharing System)在20世纪60年代开始出现并流行起来。它能让多个终端与一个计算机相连，并同时使用一台计算机系统。当时计算机价格高昂，一人一台计算机不太现实，只好就通过分时系统来实现。这样每个人都能貌似独立使用计算机了(独占性)。</p>
+<p>  分时系统有以下几个特点：<strong>多路性</strong>，<strong>独占性</strong>，<strong>交互性</strong>，<strong>及时性</strong>。</p>
+<blockquote>
+<p>分时系统示意图：</p>
+</blockquote>
+<p><img src="/assets/network/%E5%88%86%E6%97%B6%E7%B3%BB%E7%BB%9F.jpeg" alt="分时系统示意图" title="分时系统示意图"></p>
+<p>  终端系统类似于现在的桌面系统，采取交互式操作，终端发送指令给主机，主机将计算结果立即输出。因此，像BASIC这样的语言普及开来，更多的人可以使用计算机，小型机也随机产生。</p>
+<h3 id="第三阶段：计算机之间的通信"><a class="header-anchor" href="#第三阶段：计算机之间的通信"># </a>第三阶段：计算机之间的通信</h3>
+<p>  20世纪70年代，计算机性能逐步增长，体积逐渐减小，价格也逐渐降低，企业开始普及计算机。为了方便内部通信，减少磁带，软盘💾等存储介质使用，计算机之间开始链接通信线路。</p>
+<blockquote>
+<p>计算机内部通信示意图</p>
+</blockquote>
+<p><img src="/assets/network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B9%8B%E9%97%B4%E9%80%9A%E4%BF%A1.jpeg" alt="计算机之间通信"></p>
+<p>  本部门的终端向通过本部门的计算机向外部门的计算机发送指令，最后再传回本部门的计算机并返回给对应终端。</p>
+<h3 id="第四阶段：计算机网络"><a class="header-anchor" href="#第四阶段：计算机网络"># </a>第四阶段：计算机网络</h3>
+<p>  最初的终端只能和同一厂商统一系统的计算机交互，不利于信息的传递。20世纪80年代开始，随着小型机和家用电脑的普及，为了方便不同种类，不同系统之间的通信，厂商设计了一种计算网络系统，可以通过窗口操作系统，实现个人计算机与不同种类的计算机之间的通信。</p>
+<blockquote>
+<p>不同网络设备的之间的通信示意图</p>
+</blockquote>
+<p><img src="/assets/network/%E4%B8%8D%E5%90%8C%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E7%9A%84%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1%E7%A4%BA%E6%84%8F%E5%9B%BE.jpeg" alt="不同网络设备的之间的通信示意图"></p>
+<h3 id="第五阶段：互联网普及"><a class="header-anchor" href="#第五阶段：互联网普及"># </a>第五阶段：互联网普及</h3>
+<p>  20世纪90年代，个人电脑已经普及，性能也大幅提升，很多个人电脑的性能不输给unix工作站，因此很多数据处理都有个人主机来完成。通过计算机“瘦身”运动，很多公司的核心系统都转移到个人电脑上。E-mail，万维网(www:world wide web)等信息传递方式逐渐普及，方便了异构计算机之间的快速通信。</p>
+<blockquote>
+<p>互联网示意图</p>
+</blockquote>
+<p><img src="/assets/network/%E4%BA%92%E8%81%94%E7%BD%91%E7%A4%BA%E6%84%8F%E5%9B%BE.jpeg" alt="互联网示意图"></p>
+<h3 id="第六阶段：互联网中心时代"><a class="header-anchor" href="#第六阶段：互联网中心时代"># </a>第六阶段：互联网中心时代</h3>
+<p>  互联网的普及改变了通信领域，很多不同的网络技术也想互联网靠拢，电话网，电视网逐渐被IP(Internet Protocol)网取代。</p>
+<blockquote>
+<p>互联网技术为中心</p>
+</blockquote>
+<p><img src="/assets/network/%E4%BA%92%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E4%B8%BA%E4%B8%AD%E5%BF%83.jpeg" alt="互联网技术为中心"></p>
+<h3 id="第七阶段：安全通信"><a class="header-anchor" href="#第七阶段：安全通信"># </a>第七阶段：安全通信</h3>
+<p>  互联网实现了信息搜索，沟通交流，共享信息，新闻报道，远程控制等功能，成为了国家社会的基础设施最重要的环节。在便利的同时也带来了很多问题，例如信息泄露，病毒危害，网络诈骗等。计算机网路的发展已经从“简单快速的连接”转变为“安全可靠的连接”。</p>
+<h2 id="二-网络协议"><a class="header-anchor" href="#二-网络协议"># </a>二、网络协议</h2>
+<blockquote>
+<p>**协议的定义：**协议就是计算机与计算机之间通过网络实现通信时事先达成的一种“约定”。这种“约定”使那些由不同厂商的设备、不同的CPU以及不同的操作系统组成的计算机之间，只要遵循相同的协议就能够实现通信。反之，如果所使用的协议不同，就无法实现通信。这就好比两个人使用不同国家的语言说话，怎么也无法相互理解。协议可以分为很多种，每一种协议都明确地界定了它的行为规范。两台计算机之间必须能够支持相同的协议，并遵循相同协议进行处理，这样才能实现相互通信。</p>
+</blockquote>
+<h3 id="常见网络协议"><a class="header-anchor" href="#常见网络协议"># </a>常见网络协议</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">网络体系结构</th>
+<th style="text-align:center">协议</th>
+<th style="text-align:center">主要用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">TCP/IP</td>
+<td style="text-align:center">IP,ICMP,TCP,UDP,HTTP,TELNET,SNTP,SMTP…</td>
+<td style="text-align:center">互联网，局域网</td>
+</tr>
+<tr>
+<td style="text-align:center">IPX/SPX(NetWare)</td>
+<td style="text-align:center">IPX,SPX,NPC…</td>
+<td style="text-align:center">个人电脑局域网</td>
+</tr>
+<tr>
+<td style="text-align:center">AppleTalk</td>
+<td style="text-align:center">DDP,RTMP,AEP,ATP,ZIP…</td>
+<td style="text-align:center">苹果公司产品局域网</td>
+</tr>
+</tbody>
+</table>
+<h3 id="协议诞生及标准化"><a class="header-anchor" href="#协议诞生及标准化"># </a>协议诞生及标准化</h3>
+<ol>
+<li>1974年，IBM发布SNA，将本公司的通信协议公之于众，其他厂商也纷纷发布自己的协议，引发了众多协议的系统话进程，但是协议之间并不兼容，无法实现通信</li>
+<li>ISO制定了一个国际标准OSI(Open System Interconnection: “开放式通信系统互联参考模型”)。OSI并未普及但是OSI参考模型常被用于网络协议的制定当中。</li>
+<li>IETF所建立的TCP/IP模型，被大学等研究机构和计算机行业推行，成为互联网协议的行业标准。</li>
+</ol>
+<h3 id="协议分层与osi参考模型"><a class="header-anchor" href="#协议分层与osi参考模型"># </a>协议分层与OSI参考模型</h3>
+<p>  协议分层使得复杂的的网络协议简单化。每一个分层接受下一层提供的服务，并负责向上一层提供服务，上下层之间的交互遵循的约定叫**“接口”<strong>,同一层交互遵循的约定叫</strong>&quot;协议&quot;**。</p>
+<p> OSI模型将协议分为七层：</p>
+<p><img src="/assets/network/OSI%E6%A8%A1%E5%9E%8B.png" alt="OSI模型"></p>
 
     </div>
 
@@ -458,7 +452,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://sunxz007.github.io/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" title="ES6中的数据类型判断">https://sunxz007.github.io/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/</a>
+    <a href="https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/" title="计算机网络常识">https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -470,27 +464,23 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
-              <a href="/tags/EcmaScript/" rel="tag"><i class="fa fa-tag"></i> EcmaScript</a>
-              <a href="/tags/ES6/" rel="tag"><i class="fa fa-tag"></i> ES6</a>
-              <a href="/tags/%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" rel="tag"><i class="fa fa-tag"></i> 类型判断</a>
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fa fa-tag"></i> 网络</a>
+              <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> 基础</a>
+              <a href="/tags/OSI/" rel="tag"><i class="fa fa-tag"></i> OSI</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/log/" rel="next" title="Hexo—Next自定义修改日志">
-                  <i class="fa fa-chevron-left"></i> Hexo—Next自定义修改日志
+                <a href="/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" rel="next" title="ES6中的数据类型判断">
+                  <i class="fa fa-chevron-left"></i> ES6中的数据类型判断
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/note/network/BaseKnowledgeOfNetwork/" rel="prev" title="计算机网络常识">
-                  计算机网络常识 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -563,7 +553,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#es6中的数据类型判断的几种方式"><span class="nav-text"># ES6中的数据类型判断的几种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-typeof"><span class="nav-text"># 1.typeof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-instanceof"><span class="nav-text"># 2.instanceof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-constructor"><span class="nav-text"># 3.constructor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-tostring"><span class="nav-text"># 4.toString</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text"># 总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-计算机网络发展的7个阶段"><span class="nav-text"># 一、计算机网络发展的7个阶段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一阶段：批处理阶段"><span class="nav-text"># 第一阶段：批处理阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二阶段：分时系统"><span class="nav-text"># 第二阶段：分时系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三阶段：计算机之间的通信"><span class="nav-text"># 第三阶段：计算机之间的通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四阶段：计算机网络"><span class="nav-text"># 第四阶段：计算机网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第五阶段：互联网普及"><span class="nav-text"># 第五阶段：互联网普及</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第六阶段：互联网中心时代"><span class="nav-text"># 第六阶段：互联网中心时代</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第七阶段：安全通信"><span class="nav-text"># 第七阶段：安全通信</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-网络协议"><span class="nav-text"># 二、网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见网络协议"><span class="nav-text"># 常见网络协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协议诞生及标准化"><span class="nav-text"># 协议诞生及标准化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协议分层与osi参考模型"><span class="nav-text"># 协议分层与OSI参考模型</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -822,7 +812,7 @@ window.addEventListener('pjax:success', () => {
       quicklink({
         timeout: 3000,
         priority: true,
-        ignores: [uri => uri.includes('#'),uri => uri == 'https://sunxz007.github.io/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/',]
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/',]
       });
       });
   </script>
