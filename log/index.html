@@ -89,7 +89,7 @@
   <title>Hexo—Next自定义修改日志 | 孙小丢's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152837031-1"></script>
-    <script pjax>
+    <script>
       var host = window.location.hostname;
       if (host !== "localhost" || !true) {
         window.dataLayer = window.dataLayer || [];
@@ -100,7 +100,7 @@
     </script>
 
 
-  <script pjax>
+  <script>
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
@@ -184,17 +184,17 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th-list"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th-list"></i>分类<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-笔记">
@@ -337,29 +337,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><blockquote class="blockquote-center"><p>本文用于记录本站每次更新的详情</p>
-</blockquote></p><h2>2019/11/19 第一次修改</h2><p>博客引用了hexo的next主题，主题github地址为<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a>,按照<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官方文档</a>的介绍精心了初步配置</p><a id="more"></a>
+        <blockquote class="blockquote-center"><p>本文用于记录本站每次更新的详情</p>
+</blockquote><h2 id="2019-11-19-第一次修改">2019/11/19 第一次修改</h2><p>博客引用了hexo的next主题，主题github地址为<a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a>,按照<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官方文档</a>的介绍精心了初步配置</p><a id="more"></a>
 
 
-<h3>把hexo项目同步到git中存储</h3>
+<h3 id="把hexo项目同步到git中存储">把hexo项目同步到git中存储</h3>
 <p>为了将将项目文档同步到git中，保护自己在配置中的各类网站的key，按照官方的建议，把主题配置的_config.yml内容拷贝到了 /source/_data/next.yml中，上传到了自己的私有git仓库中</p>
-<h3>目录结构的修改</h3>
+<h3 id="目录结构的修改">目录结构的修改</h3>
 <p>方便以后查阅自己的笔记总结，新建了一个page笔记页面，并自定义了笔记目录，由与内容比较多就，接下来会逐步更新</p>
-<h3>对Next主题的自定义修改</h3>
-<h4>在页尾添加自定义的图文footer-banner</h4>
+<h3 id="对next主题的自定义修改">对Next主题的自定义修改</h3>
+<h4 id="在页尾添加自定义的图文footer-banner">在页尾添加自定义的图文footer-banner</h4>
 <p>在查阅官方的Muse主题的案例推荐后，看到<a href="https://leaferx.online/" target="_blank" rel="noopener">leaferx</a>文档下有一个自定义的图片banner比较有范，于是查阅了博主的样式设置，由于对swig语法还不太熟悉，就简单粗暴的修改了原始模版，具体方法如下</p>
 <p>在next主题的 _layout/_layout.swfg 的footer标签，footer-inner class 上添加如下标签</p>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.custom-banner</span>&#123;</span></span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">    background-position: center bottom;</span><br><span class="line">    padding: 40px 0;</span><br><span class="line">    margin-bottom: 40px;</span><br><span class="line">    background-size: 100%;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line"><span class="css">    <span class="selector-tag">background-color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.3</span>);</span></span><br><span class="line">    background-image: url(/images/sea.jpg);</span><br><span class="line">    background-blend-mode: darken;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="selector-class">.custom-banner</span> <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line">    text-align: center;</span><br><span class="line"><span class="css">    <span class="selector-tag">color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line">    font-family: fira code,consolas,Menlo,pingfang sc,microsoft yahei,monospace;</span><br><span class="line">    font-style: italic;</span><br><span class="line">    font-weight: 400;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"custom-banner"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Stay hungary,Stay foolish.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4>引入iconfont</h4>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.custom-banner</span>&#123;</span></span><br><span class="line">    background-attachment: fixed;</span><br><span class="line">    background-position: center bottom;</span><br><span class="line">    padding: 40px 0;</span><br><span class="line">    margin-bottom: 40px;</span><br><span class="line">    background-size: 100%;</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line"><span class="css">    <span class="selector-tag">background-color</span>: <span class="selector-tag">rgba</span>(0,0,0,0<span class="selector-class">.3</span>);</span></span><br><span class="line">    background-image: url(/images/sea.jpg);</span><br><span class="line">    background-blend-mode: darken;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="selector-class">.custom-banner</span> <span class="selector-tag">h1</span> &#123;</span></span><br><span class="line">    text-align: center;</span><br><span class="line"><span class="css">    <span class="selector-tag">color</span>: <span class="selector-id">#fff</span>;</span></span><br><span class="line">    font-family: fira code,consolas,Menlo,pingfang sc,microsoft yahei,monospace;</span><br><span class="line">    font-style: italic;</span><br><span class="line">    font-weight: 400;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"custom-banner"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Stay hungary,Stay foolish.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="引入iconfont">引入iconfont</h4>
 <p>由于Next主题使用的fontawsome免费的icon数量不是很多，而且版本比较老旧，因此使用iconfont的图标来丰富博客的图标库，网站链接在此<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a></p>
 <p><strong>修改方法：</strong></p>
 <p>为了方便日后直接使用，在next主题的 _layout/_layout.swfg 的头部文件中的&lt;head&gt;便签末尾插入以下<code>html</code>标签</p>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在iconfont生成项目后，每次添加不同的icon都会改变src地址 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//at.alicdn.com/t/font_1078070_hs0wiix70l.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.icon</span> &#123;</span></span><br><span class="line">    width: 1em; height: 1em;</span><br><span class="line"><span class="css">    <span class="selector-tag">vertical-align</span>: <span class="selector-tag">-0</span><span class="selector-class">.15em</span>;</span></span><br><span class="line">    fill: currentColor;</span><br><span class="line">    overflow: hidden;</span><br><span class="line"> &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 在iconfont生成项目后，每次添加不同的icon都会改变src地址 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//at.alicdn.com/t/font_1078070_hs0wiix70l.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-class">.icon</span> &#123;</span></span><br><span class="line">    width: 1em; height: 1em;</span><br><span class="line"><span class="css">    <span class="selector-tag">vertical-align</span>: <span class="selector-tag">-0</span><span class="selector-class">.15em</span>;</span></span><br><span class="line">    fill: currentColor;</span><br><span class="line">    overflow: hidden;</span><br><span class="line"> &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>随后在需要使用的markdown文档中使用以下标签可以使用iconfont图标,href的内容为iconfont项目内的图标标签</p>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#icon-php"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
-<h4>将站点地图放置到页脚</h4>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">svg</span> <span class="attr">class</span>=<span class="string">"icon"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">use</span> <span class="attr">xlink:href</span>=<span class="string">"#icon-php"</span>&gt;</span><span class="tag">&lt;/<span class="name">use</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="将站点地图放置到页脚">将站点地图放置到页脚</h4>
 <p>站点地图是为了方便搜索引擎爬去信息，在layout/_partials/footer.swig中，将以下html添加到span.author标签下方</p>
-<p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-map"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>站点地图:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/sitemap.xml"</span> <span class="attr">style</span>=<span class="string">"color:#999"</span>&gt;</span>Google<span class="tag">&lt;/<span class="name">a</span>&gt;</span>/</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/baidusitemap.xml"</span> <span class="attr">style</span>=<span class="string">"color:#999"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-map"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>站点地图:<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/sitemap.xml"</span> <span class="attr">style</span>=<span class="string">"color:#999"</span>&gt;</span>Google<span class="tag">&lt;/<span class="name">a</span>&gt;</span>/</span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/baidusitemap.xml"</span> <span class="attr">style</span>=<span class="string">"color:#999"</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -398,8 +398,8 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/note/web/ecmascript/es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD/" rel="next" title="ES6中的数据类型判断">
+                  <i class="fa fa-chevron-left"></i> ES6中的数据类型判断
                 </a>
             </div>
 
@@ -449,7 +449,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">2019/11/19 第一次修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">把hexo项目同步到git中存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.2.</span> <span class="nav-text">目录结构的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text">对Next主题的自定义修改</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.3.1.</span> <span class="nav-text">在页尾添加自定义的图文footer-banner</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.3.2.</span> <span class="nav-text">引入iconfont</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null"><span class="nav-number">1.3.3.</span> <span class="nav-text">将站点地图放置到页脚</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2019-11-19-第一次修改"><span class="nav-number">1.</span> <span class="nav-text">2019/11/19 第一次修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#把hexo项目同步到git中存储"><span class="nav-number">1.1.</span> <span class="nav-text">把hexo项目同步到git中存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构的修改"><span class="nav-number">1.2.</span> <span class="nav-text">目录结构的修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对next主题的自定义修改"><span class="nav-number">1.3.</span> <span class="nav-text">对Next主题的自定义修改</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -465,20 +465,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -561,12 +561,12 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">5k</span>
 </div>
 
         
 <div class="busuanzi-count">
-  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
@@ -604,74 +604,16 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
 <script src="/js/schemes/muse.js"></script>
 <script src="/js/next-boot.js"></script>
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.getAttribute('pjax') !== null) {
-      element.setAttribute('pjax', '');
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
 
 
 
   
-  <script pjax>
+  <script>
     (function(){
       var bp = document.createElement('script');
       var curProtocol = window.location.protocol.split(':')[0];
@@ -697,7 +639,6 @@ window.addEventListener('pjax:success', () => {
 
 
 
-    <div id="pjax">
 
   
 
@@ -712,6 +653,20 @@ window.addEventListener('pjax:success', () => {
       });
       });
   </script>
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -726,20 +681,5 @@ window.addEventListener('pjax:success', () => {
         flOptions.networks = "Weibo,Wechat,Douban,Twitter,Facebook,Linkedin,GooglePlus,GoogleBookmarks,Evernote";
       new needShareButton('#needsharebutton-float', flOptions);
   </script>
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
-
-    </div>
 </body>
 </html>

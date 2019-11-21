@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunxz007.github.io/note/web/ecmascript/es6%25E4%25B8%25AD%25E7%259A%2584%25E6%2595%25B0%25E6%258D%25AE%25E7%25B1%25BB%25E5%259E%258B%25E5%2588%25A4%25E6%2596%25AD/</loc>
+    
+    <lastmod>2019-11-21T04:56:00.337Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/index.html</loc>
+    
+    <lastmod>2019-11-21T03:15:37.129Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/web/ecmascript/index.html</loc>
+    
+    <lastmod>2019-11-21T02:39:20.895Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/web/index.html</loc>
+    
+    <lastmod>2019-11-21T02:37:38.823Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunxz007.github.io/hello-world/</loc>
     
-    <lastmod>2019-11-20T15:08:10.909Z</lastmod>
+    <lastmod>2019-11-21T01:42:11.803Z</lastmod>
     
   </url>
   
@@ -19,20 +47,6 @@
     <loc>https://sunxz007.github.io/note/server/index.html</loc>
     
     <lastmod>2019-11-20T10:44:08.350Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunxz007.github.io/note/index.html</loc>
-    
-    <lastmod>2019-11-20T09:38:25.811Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunxz007.github.io/note/web/index.html</loc>
-    
-    <lastmod>2019-11-20T09:38:14.272Z</lastmod>
     
   </url>
   
