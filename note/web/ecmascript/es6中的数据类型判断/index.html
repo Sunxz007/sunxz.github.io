@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Sans SC:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -48,13 +48,13 @@
   };
 </script>
 
-  <meta name="description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：">
+  <meta name="description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种： number、 boolean、 symbol、 string、 object、 undefined、 function 等。 123456789typeof &amp;apos;&amp;apos;; &#x2F;&#x2F; string 有效t">
 <meta name="keywords" content="前端,EcmaScript,ES6,类型判断">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6中的数据类型判断">
 <meta property="og:url" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;note&#x2F;web&#x2F;ecmascript&#x2F;es6%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%88%A4%E6%96%AD&#x2F;index.html">
 <meta property="og:site_name" content="孙小丢&#39;s Blog">
-<meta property="og:description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：">
+<meta property="og:description" content="# ES6中的数据类型判断的几种方式# 1.typeoftypeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种： number、 boolean、 symbol、 string、 object、 undefined、 function 等。 123456789typeof &amp;apos;&amp;apos;; &#x2F;&#x2F; string 有效t">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-21T13:04:50.439Z">
 <meta name="twitter:card" content="summary">
@@ -184,17 +184,17 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th-list"></i>分类<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th-list"></i>分类<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">12</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-笔记">
@@ -357,10 +357,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="es6中的数据类型判断的几种方式"><a class="header-anchor" href="#es6中的数据类型判断的几种方式"># </a>ES6中的数据类型判断的几种方式</h2><h3 id="1-typeof"><a class="header-anchor" href="#1-typeof"># </a>1.typeof</h3><p>typeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：</p><a id="more"></a>
-
-
-<ul>
+        <h2 id="es6中的数据类型判断的几种方式"><a class="header-anchor" href="#es6中的数据类型判断的几种方式"># </a>ES6中的数据类型判断的几种方式</h2><h3 id="1-typeof"><a class="header-anchor" href="#1-typeof"># </a>1.typeof</h3><p>typeof 是一个操作符，其右侧跟一个一元表达式，并返回这个表达式的数据类型,返回的结果用该类型的字符串(全小写字母)形式表示，包括以下 7 种：</p><ul>
 <li>number、</li>
 <li>boolean、</li>
 <li>symbol、</li>
@@ -368,8 +365,11 @@
 <li>object、</li>
 <li>undefined、</li>
 <li>function 等。</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">''</span>; <span class="comment">// string 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// number 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(); <span class="comment">// symbol 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//boolean 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">//undefined 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> [] ; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// function 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//object 无效</span></span><br></pre></td></tr></table></figure>
+</ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">''</span>; <span class="comment">// string 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">1</span>; <span class="comment">// number 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">Symbol</span>(); <span class="comment">// symbol 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//boolean 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">//undefined 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> [] ; <span class="comment">//object 无效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Function</span>(); <span class="comment">// function 有效</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">//object 无效</span></span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+
 <p><strong>总结：</strong></p>
 <ul>
 <li>对于基本类型，除 null 以外，均可以返回正确的结果。</li>
@@ -488,8 +488,8 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/note/network/BaseKnowledgeOfNetwork/" rel="prev" title="计算机网络常识">
-                  计算机网络常识 <i class="fa fa-chevron-right"></i>
+                <a href="/note/server/linux/LinuxBootProcess/" rel="prev" title="Linux系统启动过程">
+                  Linux系统启动过程 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -507,19 +507,19 @@
           
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
-            <li class="tab"><a href="#comment-valine">valine</a></li>
             <li class="tab"><a href="#comment-livere">livere</a></li>
+            <li class="tab"><a href="#comment-valine">valine</a></li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane valine" id="comment-valine">
-              <div class="comments" id="comments"></div>
-            </div>
             <div class="tab-pane livere" id="comment-livere">
               
   <div class="comments" id="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYwMi8yNDEwMg=="></div>
   </div>
   
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="comments"></div>
             </div>
         </div>
       </div>
@@ -579,20 +579,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -675,7 +675,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">16k</span>
 </div>
 
         
@@ -826,6 +826,20 @@ window.addEventListener('pjax:success', () => {
       });
       });
   </script>
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
 <div id="needsharebutton-float">
       <span class="btn">
         <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -865,20 +879,6 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     serverURLs: ''
   });
 }, window.Valine);
-</script>
-
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
 </script>
 
     </div>

@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sunxz007.github.io/note/server/linux/index.html</loc>
+    
+    <lastmod>2019-11-22T15:33:59.330Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/server/linux/LinuxBootProcess/</loc>
+    
+    <lastmod>2019-11-22T15:33:32.590Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sunxz007.github.io/note/network/BaseKnowledgeOfNetwork/</loc>
     
-    <lastmod>2019-11-21T16:17:52.471Z</lastmod>
+    <lastmod>2019-11-22T13:29:56.310Z</lastmod>
     
   </url>
   
@@ -82,13 +96,6 @@
     <loc>https://sunxz007.github.io/note/server/docker/index.html</loc>
     
     <lastmod>2019-11-21T07:17:41.388Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunxz007.github.io/note/server/linux/index.html</loc>
-    
-    <lastmod>2019-11-21T07:16:31.211Z</lastmod>
     
   </url>
   
