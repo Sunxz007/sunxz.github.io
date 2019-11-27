@@ -2,16 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sunxz007.github.io/note/server/linux/index.html</loc>
+    <loc>https://sunxz007.github.io/note/dataanalysis/3.%25E6%2595%25B0%25E6%258D%25AE%25E5%25A4%2584%25E7%2590%2586/</loc>
     
-    <lastmod>2019-11-23T04:34:49.740Z</lastmod>
+    <lastmod>2019-11-27T06:25:51.318Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/5.%25E6%2595%25B0%25E6%258D%25AE%25E5%25B1%2595%25E7%258E%25B0/</loc>
+    
+    <lastmod>2019-11-27T03:00:53.048Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/6.%25E6%2592%25B0%25E5%2586%2599%25E6%258A%25A5%25E5%2591%258A/</loc>
+    
+    <lastmod>2019-11-27T03:00:46.116Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/4.%25E6%2595%25B0%25E6%258D%25AE%25E5%2588%2586%25E6%259E%2590/</loc>
+    
+    <lastmod>2019-11-27T02:58:21.482Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/2.%25E6%2595%25B0%25E6%258D%25AE%25E6%2594%25B6%25E9%259B%2586/</loc>
+    
+    <lastmod>2019-11-27T02:54:46.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/index.html</loc>
+    
+    <lastmod>2019-11-26T07:07:39.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/dataanalysis/1.%25E6%2598%258E%25E7%25A1%25AE%25E5%2588%2586%25E6%259E%2590%25E7%259B%25AE%25E7%259A%2584%25E5%2592%258C%25E6%2580%259D%25E8%25B7%25AF/</loc>
+    
+    <lastmod>2019-11-26T05:55:05.908Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/index.html</loc>
+    
+    <lastmod>2019-11-23T05:54:27.901Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://sunxz007.github.io/note/server/linux/LinuxFileSystem/</loc>
     
-    <lastmod>2019-11-23T03:07:09.189Z</lastmod>
+    <lastmod>2019-11-23T05:03:46.091Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxz007.github.io/note/server/linux/index.html</loc>
+    
+    <lastmod>2019-11-23T04:34:49.740Z</lastmod>
     
   </url>
   
@@ -54,13 +110,6 @@
     <loc>https://sunxz007.github.io/note/web/ecmascript/index.html</loc>
     
     <lastmod>2019-11-21T07:37:06.697Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sunxz007.github.io/note/index.html</loc>
-    
-    <lastmod>2019-11-21T07:31:50.704Z</lastmod>
     
   </url>
   

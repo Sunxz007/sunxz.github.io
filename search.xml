@@ -201,6 +201,180 @@
     </entry>
     
     
+    
+    <entry>
+      <title>数据分析第五步--数据展现</title>
+      <link href="/note/dataanalysis/5.%E6%95%B0%E6%8D%AE%E5%B1%95%E7%8E%B0/"/>
+      <url>/note/dataanalysis/5.%E6%95%B0%E6%8D%AE%E5%B1%95%E7%8E%B0/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据分析第六步--撰写报告</title>
+      <link href="/note/dataanalysis/6.%E6%92%B0%E5%86%99%E6%8A%A5%E5%91%8A/"/>
+      <url>/note/dataanalysis/6.%E6%92%B0%E5%86%99%E6%8A%A5%E5%91%8A/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据分析第四步--数据分析</title>
+      <link href="/note/dataanalysis/4.%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+      <url>/note/dataanalysis/4.%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据分析第三步--数据处理</title>
+      <link href="/note/dataanalysis/3.%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+      <url>/note/dataanalysis/3.%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据清洗"><a class="header-anchor" href="#数据清洗"># </a>数据清洗</h2><h3 id="重复数据的处理"><a class="header-anchor" href="#重复数据的处理"># </a>重复数据的处理</h3><h4 id="函数法"><a class="header-anchor" href="#函数法"># </a>函数法</h4><p>  countif(统计区域，统计内容)函数:如果想统计countif统计是重复的第几个项目，可以使用countif(初始单元格到当前统计单元格区域,统计内容)统计是第几次重复，例如countif($A$1A2:A2)。</p><h4 id="高级筛选法"><a class="header-anchor" href="#高级筛选法"># </a>高级筛选法</h4><p>  数据选项卡-&gt;排序和筛选-&gt;高级筛选-&gt;选择不重复的数据</p><h4 id="条件格式法"><a class="header-anchor" href="#条件格式法"># </a>条件格式法</h4><p>  开始-&gt;条件格式-&gt;突出单元格规则-&gt;重复值</p><a id="more"></a><h4 id="数据透视表"><a class="header-anchor" href="#数据透视表"># </a>数据透视表</h4><p>  插入-&gt;<a href="https://support.office.com/zh-cn/article/%e5%88%9b%e5%bb%ba%e6%95%b0%e6%8d%ae%e9%80%8f%e8%a7%86%e8%a1%a8%e4%bb%a5%e5%88%86%e6%9e%90%e5%b7%a5%e4%bd%9c%e8%a1%a8%e6%95%b0%e6%8d%ae-a9a84538-bfe9-40a9-a8e9-f99134456576?ui=zh-CN&amp;rs=zh-CN&amp;ad=CN" target="_blank" rel="noopener">插入数据透视表</a></p><h4 id="直接删除重复数据"><a class="header-anchor" href="#直接删除重复数据"># </a>直接删除重复数据</h4><ul><li>方法一:<ul><li>数据-&gt;数据工具-&gt;删除重复项</li></ul></li><li>方法二：<ul><li>通过countif函数，计算出是第几次重复，然后排序删除重复项</li></ul></li><li>方法三：<ul><li>通过countif函数，计算出是第几次重复，然后筛选出为1的数据</li></ul></li></ul><h3 id="缺失数据的处理"><a class="header-anchor" href="#缺失数据的处理"># </a>缺失数据的处理</h3><h4 id="定位输入"><a class="header-anchor" href="#定位输入"># </a>定位输入</h4><p>  缺失数据处理的最常用的方法是采用定位功能，可用ctrl+g快捷键，或开始-&gt;编辑-&gt;查找和选择-&gt;定位条件。我们一般使用四种方法处理缺失值：</p><ol><li>使用样本统计量的值替代缺失值，一般是采用样本的平均值</li><li>用一个统计模型计算出来值去替代缺失值。常用的模型有回归模型、判别模型等，需用专业的数据分析软件</li><li>将缺失值的记录删除，不过会导致样本量减少</li><li>讲缺失值记录保存，但在统计分析时排除，当样本统计量比较大，但是缺失值不多时可以使用</li></ol><ul><li>Ctrl +Enter按键可以在选中的不规则单元格中批量填入同一数据</li></ul><h4 id="查找替换"><a class="header-anchor" href="#查找替换"># </a>查找替换</h4><ul><li>查找的快捷键：Ctrl+F</li><li>替换的快捷键：Ctrl+H</li></ul><h3 id="检查数据逻辑错误"><a class="header-anchor" href="#检查数据逻辑错误"># </a>检查数据逻辑错误</h3><ul><li>IF函数：=If(logic, true,false)</li><li>OR函数：or(条件1,条件2)满足其中一个条件为true</li><li>AND函数：AND（条件一，条件二吗。。。）全部满足为true</li><li>利用条件格式标记错误：开始-&gt;条件格式-&gt;突出显示单元格规则-&gt;其他规则-&gt;使用公式确定 要设置格式单元格</li></ul><h2 id="数据加工"><a class="header-anchor" href="#数据加工"># </a>数据加工</h2><h3 id="数据抽取"><a class="header-anchor" href="#数据抽取"># </a>数据抽取</h3><h4 id="字段分列"><a class="header-anchor" href="#字段分列"># </a>字段分列</h4><ul><li>在数据-&gt;数据工具-&gt;分列-&gt;文本分列导向</li><li>left函数和right函数截取，可配分find函数确定指定的字符</li></ul><h4 id="字段合并"><a class="header-anchor" href="#字段合并"># </a>字段合并</h4><ul><li>使用“&amp;”符号可链接字符</li><li>text函数可以把数值转换陈文本，例如“10%”直接使用&amp;符号连接会变为0.1</li><li>clean可以清除非打印的字符串</li><li>concatenate函数，与&amp;符号同样的效果</li></ul><h4 id="字段匹配"><a class="header-anchor" href="#字段匹配"># </a>字段匹配</h4><ul><li><a href="https://support.office.com/zh-cn/article/VLOOKUP-%E5%87%BD%E6%95%B0-0BBC8083-26FE-4963-8AB8-93A18AD188A1" target="_blank" rel="noopener">vlookup函数</a></li></ul><h3 id="数据计算"><a class="header-anchor" href="#数据计算"># </a>数据计算</h3><h4 id="简单的计算"><a class="header-anchor" href="#简单的计算"># </a>简单的计算</h4><p>  简单的加减乘除可以使用“=单元格 +｜-｜*｜/ 单元格来实现</p><h4 id="函数计算"><a class="header-anchor" href="#函数计算"># </a>函数计算</h4><ul><li>平均值Average</li><li>求和Sum</li><li>日期加减函数<ul><li>当前年月日：today函数(快捷键Ctrl+;)</li><li>当前时分：Ctrl+Shift+;</li><li>当前完整日期：now函数(快捷键Ctrl+; 然后按空格，在按Ctrl+Shift+;)</li><li>date函数加减时间：给2011/1/1的单元格加上3年2月和1天，可用函数表达为=date(year(日期单元格)+3，month(日期单元格)+2，day(日期单元格)+1)</li><li><a href="https://support.office.com/zh-cn/article/DATEDIF-%E5%87%BD%E6%95%B0-25dba1a4-2812-480b-84dd-8b32a451b35c" target="_blank" rel="noopener">dateif函数</a></li></ul></li></ul><h3 id="数据分组"><a class="header-anchor" href="#数据分组"># </a>数据分组</h3><ul><li>vlookup函数的模糊匹配，寻找接近但不大于阈值的值</li></ul><p><img src="/assets/dataanalysis/0/vlookup%E5%87%BD%E6%95%B0.jpg" alt></p><h3 id="数据转换"><a class="header-anchor" href="#数据转换"># </a>数据转换</h3><h4 id="行列转置"><a class="header-anchor" href="#行列转置"># </a>行列转置</h4><ul><li>方法一：选中数据，复制，然后右键选择粘贴，转置</li><li>方法二：“ctrl+alt+v”会弹出选择粘贴框</li></ul><h2 id="数据抽样"><a class="header-anchor" href="#数据抽样"># </a>数据抽样</h2><p>  随机抽样需要随机数，这时可以用rand函数获取一个0～1的随机数，可以是用int(rand()*区间长度+起始区间)来获取一个区间的整数。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据分析第二步--数据收集</title>
+      <link href="/note/dataanalysis/2.%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86/"/>
+      <url>/note/dataanalysis/2.%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据的构造"><a class="header-anchor" href="#数据的构造"># </a>数据的构造</h2><h3 id="字段与记录"><a class="header-anchor" href="#字段与记录"># </a>字段与记录</h3><p>  <code>字段</code>是事务或现象的某种特征。比如成绩表中的“学号”，“姓名”，“总分”等都是字段，在统计学中成为变量</p><p>  <code>记录</code>是事务或现象等具体表现，比如沉寂表中的“性别”可以是男或女，“总分”可以是“237”或“230”等，记录也成为数据或量值。</p><h3 id="数据类型"><a class="header-anchor" href="#数据类型"># </a>数据类型</h3><p>  数据类型一般分为字符型和数值型数据</p><p>  <code>字符型</code>数据是不具备计算能力等文字型数据，包括中文英文、数字字符（例如订单编号这类非数值型数据）等字符。例如成绩表中的“姓名”，“性别”，“总评”三个变量均为字符型数据。</p><a id="more"></a><p>  <code>数值型数据</code>是直接使用自然数或者度量单位进行计量的数据值，例如成绩表中“语文”，“数学”成绩计算得出总分这个字段，数值型数据可以用算数方法进行汇总和分析，这一点是区分数据是否属于数值型数据的重要依据。</p><h4 id="统计方法差异"><a class="header-anchor" href="#统计方法差异"># </a>统计方法差异</h4><ul><li>连续型变量：能做频数分析、集中趋势分析（均值、众数，中位数）、离散程度分析（标准差、方差、最大值、最小值、范围）</li><li>非连续型变量：主要能做频数分析</li></ul><h3 id="数据表"><a class="header-anchor" href="#数据表"># </a>数据表</h3><p>  数据表是由字段、记录和数据类型构成的数据表。数据表的要求一般要为后续数据分析做长远的考虑与规划。</p><p>基本要求如下：</p><ol><li>数据表要由标题行和数据部分组成</li><li>第一行是表的列标题（字段名），列标题不能重复</li><li>第二行起是数据部分，数据部分一行成为一个记录，数据部分不允许出现空白行和和空白列</li><li>数据表中不能有合并的单元格存在</li><li>数据表与其他数据之间至少留出一个空白行或者空白列</li><li>数据表要以一位的形式存储，实际过程中常常以二维的形式存在，此时要将二维表转换成一位表</li></ol><h2 id="数据来源"><a class="header-anchor" href="#数据来源"># </a>数据来源</h2><h3 id="文本或数据表导入"><a class="header-anchor" href="#文本或数据表导入"># </a>文本或数据表导入</h3><p>   以EXCEL为例，可在数据选项卡中选中导入csv或txt文本文件、或excel表格内的数据，甚至可以使用导入网站简单的数据表</p><h3 id="数据埋点"><a class="header-anchor" href="#数据埋点"># </a>数据埋点</h3><p>  如uv/pv、用户数、用户停留时间、浏览页面等用户行为数据</p><h3 id="第三方数据平台"><a class="header-anchor" href="#第三方数据平台"># </a>第三方数据平台</h3><p>  如Growing IO、SimilarWeb，Google Analytics，国家统计局网站</p><h3 id="问卷调查"><a class="header-anchor" href="#问卷调查"># </a>问卷调查</h3><ul><li>线上问卷调查，制作问卷工具：如问卷星</li><li>线下问卷调查</li><li>电话回访</li></ul><h4 id="问卷调查的题目类型"><a class="header-anchor" href="#问卷调查的题目类型"># </a>问卷调查的题目类型</h4><ul><li>数值题，一般要求填入具体的数值，例如时间，或者评分等等</li><li>单选题，一般单选题的答案只能有一个，因此只需留下一个字段记录即可</li><li>多选题</li><li>排序题</li><li>开发性问题</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据分析第一步--明确分析目的和思路</title>
+      <link href="/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/"/>
+      <url>/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[<p>  在进行数据之前，首先应该明确分析的目标和思路。只有明确的目标和思路才能为后续的数据收集，数据处理及数据分析题提供清晰的指引方向。针对各式各样的数据分析的需求，往往会有以下问题：</p><ul><li>不知到从何入手</li><li>分析的指标常常被人质疑不合理，不完整</li><li>自己也不明白分析出的结果有什么意义</li></ul><p>  分析方法论的作用就是知道数据分析人员对数据进行一次完整的数据分析。只有在营销、管理等方法和理论的知道下，结合实际业务才能确保数据分析的纬度的完整性，就像建筑设计为建筑工人提供建设思路一样，只有明确的设计图纸，建筑工人才能根据图纸，使用各种各样的工具和材料，建设出满足施工需求的房屋建筑来。</p><a id="more"></a><hr><p>总结一下数据分析方法论的作用</p><ul><li>理顺分析思路，确保数据分析结构体系化。</li><li>把问题分解成关联的部分，并显示其对应关系</li><li>为后续数据分析开展指引方向。</li><li>确保分析结果的有效性和正确性</li></ul><h2 id="常见的分析方法论"><a class="header-anchor" href="#常见的分析方法论"># </a>常见的分析方法论</h2><p>营销方面的理论模型有：</p><ul><li>4P理论模型</li><li>用户使用行为模型</li><li>STP理论模型</li><li>SWOT分析法、等</li></ul><p>管理方面的理论模型有：</p><ul><li>PEST模型</li><li>5W2H模型</li><li>时间管理模型</li><li>生命周期模型</li><li>逻辑树模型</li><li>金字塔模型</li><li>SMART原则、等</li></ul><p>  这些分析方法论常常运用在我们的工作生活中，为我们思考问题，解决问题，提供了一种思维路径，能让我们全面的，有逻辑的去分析问题，解决问题</p><h3 id="4p理论模型🌟"><a class="header-anchor" href="#4p理论模型🌟"># </a>4P理论模型🌟</h3><p>  4P营销理论产生于20世纪60年代的美国，随着<a href="https://wiki.mbalib.com/wiki/%E8%90%A5%E9%94%80%E7%BB%84%E5%90%88%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">营销组合理论</a>的提出而出现的。营销组合实际上有几十个要素，这些要素可以概括为4类：产品(product)，价格(Price)，渠道(Place)，促销(Promiton)。</p><h4 id="产品-product"><a class="header-anchor" href="#产品-product"># </a>产品(Product)</h4><p>  从市场营销的角度来看，产品是指能够提供给市场，被人们使用和消费并满足人们某种需求的任何东西，包括有型产品，服务，人员，组织，观念或他们的组合。</p><h4 id="价格-price-："><a class="header-anchor" href="#价格-price-："># </a>价格(Price)：</h4><p>  价格(Price)： 是指顾客购买产品时的价格，包括基本价格、折扣价格、支付期限等。价格或价格等决策关系到企业利润、成本补偿，以及是否有利于产品销促销等问题。影响定价等主要因素有三个：需求、成本与竞争。最高价格取决于市场需求，最低价格取决于该产品等成本费用，在最高价格和最低价格等幅度内，企业能把这种产品价格定多高则取决于竞争者的同种产品的价格。</p><h4 id="渠道-place"><a class="header-anchor" href="#渠道-place"># </a>渠道(Place)</h4><p>  指产品从生产企业流转到用户手上的全过程中所经历的各个环节。</p><h4 id="促销-promotion"><a class="header-anchor" href="#促销-promotion"># </a>促销(Promotion)</h4><p>  是指企业通过销售行为的改变来刺激用户消费，以短期的行为(比如让利，买一送一，营销现场气氛等等)促成消费的增长，吸引其他品牌的用户或者导致提前消费来促销销售的增长。广告、宣传推广、人员促销、销售促进时一个机构促销的四大要素。</p><h3 id="用户使用行为模型🌟"><a class="header-anchor" href="#用户使用行为模型🌟"># </a>用户使用行为模型🌟</h3><p>  用户行为是指用户为获取、使用物品或服务所采用的各种行动，用户对产品首先需要有一个认知，熟悉的过程，然后试用，在决定是否需要有一个认知熟悉感过程，然后试用，在决定是否继续消费使用，最后成为忠诚用户。以网站的用户使用行为的完整过程</p><pre class="mermaid" style="text-align: center;">            graph LR            认知-->熟悉-->试用-->使用-->忠诚          </pre><p>认知</p><ul><li>网站访问：PV，UV，访问来源</li></ul><p>熟悉</p><ul><li>网站浏览：平均停留时常、跳出率、页面偏好</li><li>站内搜索：搜索访问次数占比</li></ul><p>试用</p><ul><li>用户注册：注册用户数，注册转化率</li></ul><p>使用</p><ul><li>用户登陆：登陆用户数，访问登录比</li><li>用户订购：订单数、转化率</li></ul><p>忠诚</p><ul><li>用户黏性：回访者比率，访问深度</li><li>用户流失：用户流失数，流失率</li></ul><p>  用户行为模型常常配合漏斗图使用，后续章节</p><h3 id="stp理论-市场-目标-定位"><a class="header-anchor" href="#stp理论-市场-目标-定位"># </a><a href="https://wiki.mbalib.com/wiki/STP%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">STP理论(市场|目标|定位)</a></h3><p>  STP理论中的S、T、P分别是Segmenting、Targeting、Positioning三个英文单词的缩写，即<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E7%BB%86%E5%88%86" target="_blank" rel="noopener">市场细分</a>、<a href="https://wiki.mbalib.com/wiki/%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">目标市场</a>和<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D" target="_blank" rel="noopener">市场定位</a>的意思。STP理论的根本要义在于选择确定目标消费者或客户,或称<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">市场定位理论</a>。根据STP理论，<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">市场</a>是一个<code>综合体</code>，是<code>多层次</code>、<code>多元化</code>的<a href="https://wiki.mbalib.com/wiki/%E6%B6%88%E8%B4%B9%E9%9C%80%E6%B1%82" target="_blank" rel="noopener">消费需求</a>集合体，任何企业都无法满足所有的需求，企业应该根据不同需求、<a href="https://wiki.mbalib.com/wiki/%E8%B4%AD%E4%B9%B0%E5%8A%9B" target="_blank" rel="noopener">购买力</a>等因素把市场分为由相似需求构成的消费群，即若干子市场。这就是<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E7%BB%86%E5%88%86" target="_blank" rel="noopener">市场细分</a>。</p><p>  企业可以根据自身战略和产品情况从子市场中选取有一定规模和发展前景，并且符合公司的目标和能力的<a href="https://wiki.mbalib.com/wiki/%E7%BB%86%E5%88%86%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">细分市场</a>作为公司的<a href="https://wiki.mbalib.com/wiki/%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">目标市场</a>。随后，企业需要将<a href="https://wiki.mbalib.com/wiki/%E4%BA%A7%E5%93%81%E5%AE%9A%E4%BD%8D" target="_blank" rel="noopener">产品定位</a>在目标消费者所偏好的位置上，并通过一系列营销活动向目标消费者传达这一定位信息，让他们注意到<a href="https://wiki.mbalib.com/wiki/%E5%93%81%E7%89%8C" target="_blank" rel="noopener">品牌</a>，并感知到这就是他们所需要的。</p><p>  STP理论主要是用于公司，项目，产品定位分析的时候的使用的，牵涉到方面过多，可以和PEST分析发，swot分析法等共用，这里暂时先不展开了，数据分析只占了其中的一部分。</p><h3 id="swot分析法"><a class="header-anchor" href="#swot分析法"># </a><a href="https://wiki.mbalib.com/wiki/Swot" target="_blank" rel="noopener">SWOT分析法</a></h3><p>  <strong>SWOT分析法</strong>（也称<strong>TOWS分析法</strong>、<strong>道斯矩阵</strong>）即<strong>态势分析法</strong>。在现在的<a href="https://wiki.mbalib.com/wiki/%E6%88%98%E7%95%A5%E8%A7%84%E5%88%92" target="_blank" rel="noopener">战略规划</a>报告里，SWOT分析应该算是一个众所周知的工具。来自麦肯锡咨询公司的SWOT分析，包括分析企业的<code>优势（Strengths）</code>、<code>劣势（Weaknesses）</code>、<code>机会（Opportunities）</code>和<code>威胁（Threats）</code>。</p><p>  通过SWOT分析，可以帮助企业把资源和行动聚集在自己的强项和有最多机会的地方；并让企业的战略变得明朗。SWOT分析更多的用于企业战略指导，这里就不展开了。</p><h3 id="pest分析模型🌟"><a class="header-anchor" href="#pest分析模型🌟"># </a><a href="https://wiki.mbalib.com/wiki/PEST%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener">PEST分析模型</a>🌟</h3><p>  <strong>PEST分析</strong>是战略咨询顾问用来帮助企业检阅其外部宏观环境的一种方法，一般用于对宏观环境对分析<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。对宏观宏观环境应诉做分析时，由于不同行业和企业有其自身特点和经营需要，分析的具体内容会有差异，但一般都对应以下四个方面</p><ul><li>Political(政治因素)</li><li>Economic(经济因素)</li><li>Social(社会因素)</li><li>Techonlogical(技术因素)</li></ul><h4 id="政治法律环境-political-factors"><a class="header-anchor" href="#政治法律环境-political-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E6%94%BF%E6%B2%BB%E6%B3%95%E5%BE%8B%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">政治法律环境</a>(Political Factors)</h4><p>  政治环境包括一个国家的<code>社会制度</code>，<code>执政党的性质</code>，<code>政府的方针</code>，<code>政策</code>和<code>法令</code>等。不同国家有着不同的社会性质，不同的社会制度对于组织活动有不同的限制和要求。即使是社会制度不变的同一国家，在不同时期，也会由于执政党的不同，其政府方针特点、政策倾向对组织活动态度和影响也是不同变化的.</p><p>  一般考量政治环境的关键因素有以下指标</p><ul><li>政治体制</li><li>经济体制</li><li>财政政策</li><li>税收政策</li><li>产业政策</li><li>投资政策</li><li>国防开支水平</li><li>政府补贴水平</li><li>民众的政治参与度、等</li></ul><blockquote><p>政治分析可参考的网站举例：</p><ul><li><a href="http://www.npc.gov.cn/npc/index.shtml" target="_blank" rel="noopener">中国人大网</a></li><li><a href="http://www.gov.cn/index.htm" target="_blank" rel="noopener">中国中央政府网</a></li><li>还有个地方的网站，不一一举例了。</li></ul></blockquote><h4 id="经济环境-economic-factors"><a class="header-anchor" href="#经济环境-economic-factors"># </a>经济环境(Economic Factors)</h4><p>  <a href="https://wiki.mbalib.com/wiki/%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">经济环境</a>分为宏观和微观两个方面。</p><p>  <a href="https://wiki.mbalib.com/wiki/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">宏观经济环境</a>主要指一个国家的人口数量及其增长趋势，<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E6%94%B6%E5%85%A5" target="_blank" rel="noopener">国民收入</a>、<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E7%94%9F%E4%BA%A7%E6%80%BB%E5%80%BC" target="_blank" rel="noopener">国民生产总值</a>及其变化情况以及通过这些指标能够反映的<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E7%BB%8F%E6%B5%8E" target="_blank" rel="noopener">国民经济</a><a href="https://wiki.mbalib.com/wiki/%E5%8F%91%E5%B1%95%E6%B0%B4%E5%B9%B3" target="_blank" rel="noopener">发展水平</a>和<a href="https://wiki.mbalib.com/wiki/%E5%8F%91%E5%B1%95%E9%80%9F%E5%BA%A6" target="_blank" rel="noopener">发展速度</a>。</p><p>  <a href="https://wiki.mbalib.com/wiki/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">微观经济环境</a>主要指企业所在地区或所服务地区的消费者的收入水平、<a href="https://wiki.mbalib.com/wiki/%E6%B6%88%E8%B4%B9%E5%81%8F%E5%A5%BD" target="_blank" rel="noopener">消费偏好</a>、储蓄情况、就业程度等因素。这些因素直接决定着企业目前及未来的市场大小。</p><p>分析经济环境的关键指标有：</p><ul><li><a href="https://baike.baidu.com/item/%E5%9B%BD%E5%86%85%E7%94%9F%E4%BA%A7%E6%80%BB%E5%80%BC/31864?fromtitle=GDP&amp;fromid=41201" target="_blank" rel="noopener">国内生产总值</a>(GDP)及增长率</li><li>进出口总额及增长率</li><li>利率</li><li>汇率</li><li><a href="https://wiki.mbalib.com/wiki/%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%8E%87" target="_blank" rel="noopener">通货膨胀率</a></li><li><a href="https://baike.baidu.com/item/%E6%B6%88%E8%B4%B9%E8%80%85%E7%89%A9%E4%BB%B7%E6%8C%87%E6%95%B0/9843779?fromtitle=CPI&amp;fromid=5561" target="_blank" rel="noopener">消费价格指数(CPI)</a></li><li><a href="https://baike.baidu.com/item/%E4%BA%BA%E5%9D%87%E5%8F%AF%E6%94%AF%E9%85%8D%E6%94%B6%E5%85%A5?fromtitle=%E5%B1%85%E6%B0%91%E5%8F%AF%E6%94%AF%E9%85%8D%E6%94%B6%E5%85%A5&amp;fromid=843061" target="_blank" rel="noopener">居民可支配收入</a></li><li><a href="https://wiki.mbalib.com/wiki/%E8%B4%A7%E5%B8%81" target="_blank" rel="noopener">货币</a>与<a href="https://wiki.mbalib.com/wiki/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96" target="_blank" rel="noopener">财政政策</a></li><li>失业率与失业趋势</li><li><a href="https://wiki.mbalib.com/wiki/%E8%AF%81%E5%88%B8%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">证券市场</a>状况</li><li>价格波动</li><li>劳动生产率、等</li></ul><blockquote><p>数据参考网站：</p><p><a href="http://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局</a></p></blockquote><h4 id="社会文化环境-sociocultural-factors"><a class="header-anchor" href="#社会文化环境-sociocultural-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E7%A4%BE%E4%BC%9A%E6%96%87%E5%8C%96%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">社会文化环境</a>(Sociocultural Factors)</h4><p>  社会环境包括一个国家或地区的居民教育程度水平、道德水平、宗教信仰，风俗习惯、审美观点、价值观念、<a href="https://baike.baidu.com/item/%E4%BA%BA%E5%8F%A3%E5%8F%98%E5%8A%A8" target="_blank" rel="noopener">人口变动</a>趋势等。</p><p>  文化水平会影响居民的需求层次；宗教信仰和风俗习惯会禁止或抵制某些活动的进行；<a href="https://wiki.mbalib.com/wiki/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%BF%B5" target="_blank" rel="noopener">价值观念</a>会影响居民对<a href="https://wiki.mbalib.com/wiki/%E7%BB%84%E7%BB%87%E7%9B%AE%E6%A0%87" target="_blank" rel="noopener">组织目标</a>、组织活动以及组织存在本身的认可与否；审美观点则会影响人们对组织活动内容、活动方式以及活动成果的态度。</p><p> 　　<strong>关键的社会文化因素：</strong></p><ul><li>妇女生育率</li><li>人口结构比例</li><li>性别比例</li><li>出生率死亡率</li><li>人口移进移出率</li><li>种族结构</li><li>社会保障计划</li><li>人口预期寿命</li><li>人均收入</li><li>生活方式</li><li>平均教育状况</li><li>城市、城镇和农村的人口变化</li><li>宗教信仰状况等</li></ul><h4 id="技术环境-technological-factors"><a class="header-anchor" href="#技术环境-technological-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E6%8A%80%E6%9C%AF%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">技术环境</a>(Technological Factors)</h4><p>技术环境除了要考察与企业所处领域的活动直接相关的技术手段的发展变化外，还应及时了解：</p><ol><li><p>国家对科技开发的投资和支持重点；</p></li><li><p>该领域技术发展动态和研究开发费用总额；</p></li><li><p><a href="https://wiki.mbalib.com/wiki/%E6%8A%80%E6%9C%AF%E8%BD%AC%E7%A7%BB" target="_blank" rel="noopener">技术转移</a>和技术<a href="https://wiki.mbalib.com/wiki/%E5%95%86%E5%93%81%E5%8C%96" target="_blank" rel="noopener">商品化</a>速度；</p></li><li><p>专利及其保护情况，等等。</p></li></ol><p>分析科技因素的指标有：</p><ul><li>新技术的发明和发展</li><li>技术更新速度</li><li>技术传播速度</li><li>技术商品化速度</li><li>国家重点支持项目、国家投入研发费用</li><li>专利个数和保护情况、等</li></ul><blockquote><p>数据参考网站：</p><p><a href="http://epub.sipo.gov.cn/" target="_blank" rel="noopener">中国专利公布公告网</a></p><p><a href="http://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局</a></p><p><a href="http://www.pss-system.gov.cn/" target="_blank" rel="noopener">专利检索及分析网</a></p><p><a href="http://chinaip.sipo.gov.cn/" target="_blank" rel="noopener">国家重点产业专利信息服务平台</a></p></blockquote><p><a href="https://wiki.mbalib.com/wiki/PEST%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B#PEST.E5.88.86.E6.9E.90.E6.A8.A1.E5.9E.8B.E6.A1.88.E4.BE.8B.E5.88.86.E6.9E.90" target="_blank" rel="noopener">点击查看分析案例</a></p><h3 id="5w2h🌟"><a class="header-anchor" href="#5w2h🌟"># </a>5W2H🌟</h3><p>  5W2H模型能简单，方便，易于理解，广泛用于企业营销、活动管理产品分析等，对于决策和执行性的活动措施也非常有帮助，也有助于弥补考虑问题的疏漏。</p><p>WHY——为什么？为什么要这么做？理由何在？原因是什么？</p><ul><li>WHAT——是什么？目的是什么？做什么工作？</li><li>WHO——谁？由谁来承担？谁来完成？谁负责？</li><li>WHEN——何时？什么时间完成？什么时机最适宜？</li><li>WHERE——何处？在哪里做？从哪里入手？</li><li>HOW——怎么做？如何提高效率？如何实施？方法怎样？</li><li>HOW MUCH——多少？做到什么程度？数量如何？质量水平如何？费用产出如何？</li></ul><blockquote><p>案例：</p></blockquote><p><img src="/assets/dataanalysis/0/5W2H%E6%A1%88%E4%BE%8B.jpg" alt></p><h3 id="时间管理模型-time-management"><a class="header-anchor" href="#时间管理模型-time-management"># </a>时间管理模型（Time Management）</h3><p>  时间管理常常用于工作安排和自我管理，和数据分析管理不大，这里只做补充说明。时间管理的目的是为了决定什么事该做，什么事不该做，从而有效地运用时间，降低变动性。这里列举了两个</p><h4 id="时间-四象限-法"><a class="header-anchor" href="#时间-四象限-法"># </a>时间“四象限”法</h4><p>  著名管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：</p><ul><li>既紧急又重要（如<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E4%BA%8B%E5%8D%B1%E6%9C%BA" target="_blank" rel="noopener">人事危机</a>、<a href="https://wiki.mbalib.com/wiki/%E5%AE%A2%E6%88%B7%E6%8A%95%E8%AF%89" target="_blank" rel="noopener">客户投诉</a>、即将到期的任务、<a href="https://wiki.mbalib.com/wiki/%E8%B4%A2%E5%8A%A1%E5%8D%B1%E6%9C%BA" target="_blank" rel="noopener">财务危机</a>等）</li><li>重要但不紧急（如建立<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB" target="_blank" rel="noopener">人际关系</a>、新的机会、<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E5%91%98%E5%9F%B9%E8%AE%AD" target="_blank" rel="noopener">人员培训</a>、制订防范措施等）</li><li>紧急但不重要（如电话铃声、不速之客、<a href="https://wiki.mbalib.com/wiki/%E8%A1%8C%E6%94%BF%E6%A3%80%E6%9F%A5" target="_blank" rel="noopener">行政检查</a>、主管部门会议等）</li><li>既不紧急也不重要（如客套的闲谈、无聊的信件、个人的爱好等）。</li></ul><p><img src="https://wiki.mbalib.com/w/images/a/a0/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.png" alt></p><ol><li><p>对重要和紧急的事情当然是立即就做</p></li><li><p>而对不重要不紧急的事情不做</p></li><li><p>平时多做重要但不紧急的事情，（因为这是第二象限，常常被称为第二象限工作法）</p></li><li><p>对紧急但不重要的事情选择做。</p></li></ol><h4 id="计划管理"><a class="header-anchor" href="#计划管理"># </a>计划管理</h4><p>  关于计划，有日计划、周计划、月计划、季度计划、年度计划。时间管理的重点是待办单、日计划、周计划、月计划。</p><ul><li>待办单：将你每日要做的一些工作事先列出一份清单，排出优先次序，确认完成时间，以突出工作重点。要避免遗忘就要避免半途而废，尽可能做到，今日事今日毕。</li><li>待办单主要包括的内容：非日常工作、特殊事项、行动计划中的工作、昨日未完成的事项等。</li><li>待办单的使用注意：每天在固定时间制定待办单（一上班就做）、只制定一张待办单、完成一项工作划掉一项、待办单要为应付紧急情况留出时间、最关键的一项，每天坚持。</li><li>每年年末作出下一年度工作规划； 每季季末作出下季末工作规划；每月月末作出下月工作计划；每周周末作出下周工作计划</li></ul><blockquote><p>其他时间管理理论：<a href="https://wiki.mbalib.com/wiki/Category:%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86" target="_blank" rel="noopener">点击查看</a></p></blockquote><h3 id="逻辑树分析法🌟"><a class="header-anchor" href="#逻辑树分析法🌟"># </a>逻辑树分析法🌟</h3><p>  逻辑树又称问题树、演绎树或分解树等。<a href="https://wiki.mbalib.com/wiki/%E9%BA%A6%E8%82%AF%E9%94%A1" target="_blank" rel="noopener">麦肯锡</a>分析问题最常使用的工具就是“逻辑树”。逻辑树是将问题的所有子问题分层罗列，从最高层开始，并逐步向下扩展。</p><blockquote><p>逻辑树分析法特点</p></blockquote><p><img src="/assets/dataanalysis/0/%E9%80%BB%E8%BE%91%E6%A0%91%E5%88%86%E6%9E%90%E6%B3%95%E7%89%B9%E7%82%B9.gif" alt></p><blockquote><p>逻辑树种类</p></blockquote><p><img src="/assets/dataanalysis/0/%E9%80%BB%E8%BE%91%E6%A0%91%E7%A7%8D%E7%B1%BB.gif" alt></p><blockquote><p>逻辑树分析法举例</p><p>案例来源：小明学数据–<a href="https://zhuanlan.zhihu.com/p/35933899" target="_blank" rel="noopener">数据分析基础—2.2.3 逻辑树分析法</a></p></blockquote><h4 id="提出问题-问题树"><a class="header-anchor" href="#提出问题-问题树"># </a>提出问题(问题树)</h4><p>  在运用逻辑树时，首先可由左至右画出树状图，最左边是已知问题，即思考的目标问题——树干，其次再思考造成问题的原因，作出第一层原因——树枝，当第一层原因浮现后，可针对个别原因再深入细究，依次是第二层原因、第三层…，逐层递推,逐渐有抽象转化为具体的可分析的问题。</p><p><img src="/assets/dataanalysis/0/%E9%97%AE%E9%A2%98%E6%A0%91.jpg" alt></p><h4 id="解决问题-方法树"><a class="header-anchor" href="#解决问题-方法树"># </a>解决问题(方法树)</h4><p>  在以逻辑树追究出问题的原因之后，接下来就以分析的结果做为依据，思考具体的解决方案。这个过程可以借助解决问题的逻辑树达成，做法上也与追究原因类似：首先最左边是思考的主题也就是已知问题——树干，之后则是已知问题有几种解决方案，即第一层树枝，然后再深入分析提出第二层解决方案，一步步深入到具体可执行的方法（smart原则）。</p><p><img src="/assets/dataanalysis/0/%E6%96%B9%E6%B3%95%E6%A0%91.jpg" alt></p><h3 id="金字塔模型"><a class="header-anchor" href="#金字塔模型"># </a>金字塔模型</h3><p>  http://www.woshipm.com/operate/2586618.html</p><p>http://www.woshipm.com/operate/1294732.html</p><h3 id="smart原则"><a class="header-anchor" href="#smart原则"># </a>SMART原则</h3><p>  smart原则常用于目标管理，是最常用的管理理论之一，和数据分析关系不是很大，此处用作补充说明。目标管理是使经理的工作变被动为主动的一个很好的手段，实施目标管理不但是有利于员工更加明确高效地工作，更是为了未来的绩效考核制定了目标和考核标准，使考核更加科学化、规范化，更能保证考核的公开、公平与公正。毕竟，没有目标你是无法考核员工的。原则如下：</p><ul><li>S代表具体(Specific)，指目标要切中特定的工作指标，不能笼统；</li><li>M代表可衡量的(Measurable)，指目标是数量化或者行为化的，验证这些绩效指标的数据或者信息是可以获得的；</li><li>A代表可实现(Attainable)，指目标 在付出努力的情况下可以实现，避免设立过高或过低的目标；</li><li>R代表是相关的(Relevant)，指目标是与总体目标是有关的；</li><li>T代表有时限(Time bound)，注重完成目标的特定期限；</li></ul><blockquote><p>具体资料案例可<a href="https://wiki.mbalib.com/wiki/SMART%E5%8E%9F%E5%88%99" target="_blank" rel="noopener">点击链接</a>查阅</p></blockquote><h2 id="常见的数据分析场景"><a class="header-anchor" href="#常见的数据分析场景"># </a>常见的数据分析场景</h2><ul><li><p>运营</p><ul><li>活动运营</li><li>内容运营</li><li>商品运营</li><li>用户运营<ul><li>用户分类</li><li>用户生命周期</li></ul></li></ul></li><li><p>产品</p><ul><li>产品功能</li><li>产品体验</li><li>产品调研</li><li>用户需求调研</li></ul></li><li><p>市场</p><ul><li>商务合作效果</li><li>渠道推广效果</li><li>投入产出比</li></ul><h2 id="列举几个数据模型"><a class="header-anchor" href="#列举几个数据模型"># </a>列举几个数据模型</h2><h3 id="qq模型"><a class="header-anchor" href="#qq模型"># </a>QQ模型</h3><p> QQ模型常常用于分析某一时间内某一产品的的反馈效果，用于评估一个产品是否有效，及时发现问题所在，并做好相应对策的，常用于互联网产品的分析。</p><p>quantity数量（绝对数）</p><ul><li>用户数</li><li>浏览量</li><li>点击量</li></ul><p>quality：质量（相对数）</p><ul><li>留存率</li><li>转化率</li><li>参与率</li></ul><blockquote><p>案例</p></blockquote><p><img src="http://note.youdao.com/yws/res/10957/WEBRESOURCEfbbe868944aa8033c62397881a56845e" alt="20191104125218.jpg"></p></li></ul><h2 id="aarrr模型"><a class="header-anchor" href="#aarrr模型"># </a>AARRR模型</h2><p>AARRR是Acquisition、Activation、Retention、Revenue、Refer，这个五个单词的缩写，分别对应用户生命周期中的5个重要环节。</p><ol><li>Acquisition 用户获取<ul><li>用户获取成本=（营销费用+销售费用)/同时期新增用户数</li><li>用户来源渠道：渠道新用户数、驱动用户占比、渠道成本</li></ul></li><li>Activation 用户激活<ul><li>定义用户行为、用户激活率、激活漏斗转化率</li></ul></li><li>Retention 用户留存<ul><li>用户生命周期、用户留存率、不同用户分组留存率</li></ul></li><li>Revenue 收入<ul><li>付费用户数、付费用户占比，平均付费金额</li></ul></li><li>Refer 推荐<ul><li>推荐用户数</li><li>推荐转化率</li><li>被推荐转化率</li></ul></li></ol><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>宏观环境又称为一般环境，是指影响一切行业和企业的各种宏观力量 <a href="#fnref1" class="footnote-backref">↩</a></p></li></ol></section>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据分析 </category>
+          
+          <category> 基础理论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

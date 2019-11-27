@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="孙小丢's Blog" type="application/atom+xml">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Noto Sans SC:300,300italic,400,400italic,700,700italic|Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="在进行数据之前，首先应该明确分析的目标和思路。只有明确的目标和思路才能为后续的数据收集，数据处理及数据分析题提供清晰的指引方向。针对各式各样的数据分析的需求，往往会有以下问题： 不知到从何入手 分析的指标常常被人质疑不合理，不完整 自己也不明白分析出的结果有什么意义   分析方法论的作用就是知道数据分析人员对数据进行一次完整的数据分析。只有在营销、管理等方法和理论的知道下，结合实际业务才能确保">
+<meta name="keywords" content="基础,数据分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据分析第一步--明确分析目的和思路">
+<meta property="og:url" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;note&#x2F;dataanalysis&#x2F;1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF&#x2F;index.html">
+<meta property="og:site_name" content="孙小丢&#39;s Blog">
+<meta property="og:description" content="在进行数据之前，首先应该明确分析的目标和思路。只有明确的目标和思路才能为后续的数据收集，数据处理及数据分析题提供清晰的指引方向。针对各式各样的数据分析的需求，往往会有以下问题： 不知到从何入手 分析的指标常常被人质疑不合理，不完整 自己也不明白分析出的结果有什么意义   分析方法论的作用就是知道数据分析人员对数据进行一次完整的数据分析。只有在营销、管理等方法和理论的知道下，结合实际业务才能确保">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;5W2H%E6%A1%88%E4%BE%8B.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;wiki.mbalib.com&#x2F;w&#x2F;images&#x2F;a&#x2F;a0&#x2F;%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;%E9%80%BB%E8%BE%91%E6%A0%91%E5%88%86%E6%9E%90%E6%B3%95%E7%89%B9%E7%82%B9.gif">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;%E9%80%BB%E8%BE%91%E6%A0%91%E7%A7%8D%E7%B1%BB.gif">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;%E9%97%AE%E9%A2%98%E6%A0%91.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;%E6%96%B9%E6%B3%95%E6%A0%91.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;note.youdao.com&#x2F;yws&#x2F;res&#x2F;10957&#x2F;WEBRESOURCEfbbe868944aa8033c62397881a56845e">
+<meta property="og:updated_time" content="2019-11-26T05:55:05.908Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;sunxz007.github.io&#x2F;assets&#x2F;dataanalysis&#x2F;0&#x2F;5W2H%E6%A1%88%E4%BE%8B.jpg">
+
+<link rel="canonical" href="https://sunxz007.github.io/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-float {
+  bottom: 88px;
+  cursor: pointer;
+  left: -8px;
+  position: fixed;
+  z-index: 9999;
+}
+#needsharebutton-float .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 4px;
+  padding: 0 10px 0 14px;
+}
+</style>
+  <title>数据分析第一步--明确分析目的和思路 | 孙小丢's Blog</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152837031-1"></script>
+    <script pjax>
+      var host = window.location.hostname;
+      if (host !== "localhost" || !true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-152837031-1');
+      }
+    </script>
+
+
+  <script pjax>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?589a604b52f89fa2dcf47a260f97efd1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script src="//at.alicdn.com/t/font_1078070_kkl7by85z3e.js"></script>
+  <style>
+  .icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+  </style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">孙小丢's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">13</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th-list"></i>分类<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">15</span></a>
+
+  </li>
+        <li class="menu-item menu-item-笔记">
+
+    <a href="/note/" rel="section"><i class="fa fa-fw fa-address-book"></i>笔记</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/Sunxz007" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sunxz007.github.io/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="孙小丢">
+      <meta itemprop="description" content="Good Good Study！Day Day Up！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="孙小丢's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          数据分析第一步--明确分析目的和思路
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-05-18 10:13:32" itemprop="dateCreated datePublished" datetime="2019-05-18T10:13:32+08:00">2019-05-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-26 13:55:05" itemprop="dateModified" datetime="2019-11-26T13:55:05+08:00">2019-11-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">基础理论</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>  在进行数据之前，首先应该明确分析的目标和思路。只有明确的目标和思路才能为后续的数据收集，数据处理及数据分析题提供清晰的指引方向。针对各式各样的数据分析的需求，往往会有以下问题：</p><ul>
+<li>不知到从何入手</li>
+<li>分析的指标常常被人质疑不合理，不完整</li>
+<li>自己也不明白分析出的结果有什么意义</li>
+</ul><p>  分析方法论的作用就是知道数据分析人员对数据进行一次完整的数据分析。只有在营销、管理等方法和理论的知道下，结合实际业务才能确保数据分析的纬度的完整性，就像建筑设计为建筑工人提供建设思路一样，只有明确的设计图纸，建筑工人才能根据图纸，使用各种各样的工具和材料，建设出满足施工需求的房屋建筑来。</p><a id="more"></a>
+
+
+<hr>
+<p>总结一下数据分析方法论的作用</p>
+<ul>
+<li>理顺分析思路，确保数据分析结构体系化。</li>
+<li>把问题分解成关联的部分，并显示其对应关系</li>
+<li>为后续数据分析开展指引方向。</li>
+<li>确保分析结果的有效性和正确性</li>
+</ul>
+<h2 id="常见的分析方法论"><a class="header-anchor" href="#常见的分析方法论"># </a>常见的分析方法论</h2>
+<p>营销方面的理论模型有：</p>
+<ul>
+<li>4P理论模型</li>
+<li>用户使用行为模型</li>
+<li>STP理论模型</li>
+<li>SWOT分析法、等</li>
+</ul>
+<p>管理方面的理论模型有：</p>
+<ul>
+<li>PEST模型</li>
+<li>5W2H模型</li>
+<li>时间管理模型</li>
+<li>生命周期模型</li>
+<li>逻辑树模型</li>
+<li>金字塔模型</li>
+<li>SMART原则、等</li>
+</ul>
+<p>  这些分析方法论常常运用在我们的工作生活中，为我们思考问题，解决问题，提供了一种思维路径，能让我们全面的，有逻辑的去分析问题，解决问题</p>
+<h3 id="4p理论模型🌟"><a class="header-anchor" href="#4p理论模型🌟"># </a>4P理论模型🌟</h3>
+<p>  4P营销理论产生于20世纪60年代的美国，随着<a href="https://wiki.mbalib.com/wiki/%E8%90%A5%E9%94%80%E7%BB%84%E5%90%88%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">营销组合理论</a>的提出而出现的。营销组合实际上有几十个要素，这些要素可以概括为4类：产品(product)，价格(Price)，渠道(Place)，促销(Promiton)。</p>
+<h4 id="产品-product"><a class="header-anchor" href="#产品-product"># </a>产品(Product)</h4>
+<p>  从市场营销的角度来看，产品是指能够提供给市场，被人们使用和消费并满足人们某种需求的任何东西，包括有型产品，服务，人员，组织，观念或他们的组合。</p>
+<h4 id="价格-price-："><a class="header-anchor" href="#价格-price-："># </a>价格(Price)：</h4>
+<p>  价格(Price)： 是指顾客购买产品时的价格，包括基本价格、折扣价格、支付期限等。价格或价格等决策关系到企业利润、成本补偿，以及是否有利于产品销促销等问题。影响定价等主要因素有三个：需求、成本与竞争。最高价格取决于市场需求，最低价格取决于该产品等成本费用，在最高价格和最低价格等幅度内，企业能把这种产品价格定多高则取决于竞争者的同种产品的价格。</p>
+<h4 id="渠道-place"><a class="header-anchor" href="#渠道-place"># </a>渠道(Place)</h4>
+<p>  指产品从生产企业流转到用户手上的全过程中所经历的各个环节。</p>
+<h4 id="促销-promotion"><a class="header-anchor" href="#促销-promotion"># </a>促销(Promotion)</h4>
+<p>  是指企业通过销售行为的改变来刺激用户消费，以短期的行为(比如让利，买一送一，营销现场气氛等等)促成消费的增长，吸引其他品牌的用户或者导致提前消费来促销销售的增长。广告、宣传推广、人员促销、销售促进时一个机构促销的四大要素。</p>
+<h3 id="用户使用行为模型🌟"><a class="header-anchor" href="#用户使用行为模型🌟"># </a>用户使用行为模型🌟</h3>
+<p>  用户行为是指用户为获取、使用物品或服务所采用的各种行动，用户对产品首先需要有一个认知，熟悉的过程，然后试用，在决定是否需要有一个认知熟悉感过程，然后试用，在决定是否继续消费使用，最后成为忠诚用户。以网站的用户使用行为的完整过程</p>
+<pre class="mermaid" style="text-align: center;">
+            graph LR
+            认知-->熟悉-->试用-->使用-->忠诚
+
+          </pre>
+<p>认知</p>
+<ul>
+<li>网站访问：PV，UV，访问来源</li>
+</ul>
+<p>熟悉</p>
+<ul>
+<li>网站浏览：平均停留时常、跳出率、页面偏好</li>
+<li>站内搜索：搜索访问次数占比</li>
+</ul>
+<p>试用</p>
+<ul>
+<li>用户注册：注册用户数，注册转化率</li>
+</ul>
+<p>使用</p>
+<ul>
+<li>用户登陆：登陆用户数，访问登录比</li>
+<li>用户订购：订单数、转化率</li>
+</ul>
+<p>忠诚</p>
+<ul>
+<li>用户黏性：回访者比率，访问深度</li>
+<li>用户流失：用户流失数，流失率</li>
+</ul>
+<p>  用户行为模型常常配合漏斗图使用，后续章节</p>
+<h3 id="stp理论-市场-目标-定位"><a class="header-anchor" href="#stp理论-市场-目标-定位"># </a><a href="https://wiki.mbalib.com/wiki/STP%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">STP理论(市场|目标|定位)</a></h3>
+<p>  STP理论中的S、T、P分别是Segmenting、Targeting、Positioning三个英文单词的缩写，即<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E7%BB%86%E5%88%86" target="_blank" rel="noopener">市场细分</a>、<a href="https://wiki.mbalib.com/wiki/%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">目标市场</a>和<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D" target="_blank" rel="noopener">市场定位</a>的意思。STP理论的根本要义在于选择确定目标消费者或客户,或称<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E5%AE%9A%E4%BD%8D%E7%90%86%E8%AE%BA" target="_blank" rel="noopener">市场定位理论</a>。根据STP理论，<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">市场</a>是一个<code>综合体</code>，是<code>多层次</code>、<code>多元化</code>的<a href="https://wiki.mbalib.com/wiki/%E6%B6%88%E8%B4%B9%E9%9C%80%E6%B1%82" target="_blank" rel="noopener">消费需求</a>集合体，任何企业都无法满足所有的需求，企业应该根据不同需求、<a href="https://wiki.mbalib.com/wiki/%E8%B4%AD%E4%B9%B0%E5%8A%9B" target="_blank" rel="noopener">购买力</a>等因素把市场分为由相似需求构成的消费群，即若干子市场。这就是<a href="https://wiki.mbalib.com/wiki/%E5%B8%82%E5%9C%BA%E7%BB%86%E5%88%86" target="_blank" rel="noopener">市场细分</a>。</p>
+<p>  企业可以根据自身战略和产品情况从子市场中选取有一定规模和发展前景，并且符合公司的目标和能力的<a href="https://wiki.mbalib.com/wiki/%E7%BB%86%E5%88%86%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">细分市场</a>作为公司的<a href="https://wiki.mbalib.com/wiki/%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">目标市场</a>。随后，企业需要将<a href="https://wiki.mbalib.com/wiki/%E4%BA%A7%E5%93%81%E5%AE%9A%E4%BD%8D" target="_blank" rel="noopener">产品定位</a>在目标消费者所偏好的位置上，并通过一系列营销活动向目标消费者传达这一定位信息，让他们注意到<a href="https://wiki.mbalib.com/wiki/%E5%93%81%E7%89%8C" target="_blank" rel="noopener">品牌</a>，并感知到这就是他们所需要的。</p>
+<p>  STP理论主要是用于公司，项目，产品定位分析的时候的使用的，牵涉到方面过多，可以和PEST分析发，swot分析法等共用，这里暂时先不展开了，数据分析只占了其中的一部分。</p>
+<h3 id="swot分析法"><a class="header-anchor" href="#swot分析法"># </a><a href="https://wiki.mbalib.com/wiki/Swot" target="_blank" rel="noopener">SWOT分析法</a></h3>
+<p>  <strong>SWOT分析法</strong>（也称<strong>TOWS分析法</strong>、<strong>道斯矩阵</strong>）即<strong>态势分析法</strong>。在现在的<a href="https://wiki.mbalib.com/wiki/%E6%88%98%E7%95%A5%E8%A7%84%E5%88%92" target="_blank" rel="noopener">战略规划</a>报告里，SWOT分析应该算是一个众所周知的工具。来自麦肯锡咨询公司的SWOT分析，包括分析企业的<code>优势（Strengths）</code>、<code>劣势（Weaknesses）</code>、<code>机会（Opportunities）</code>和<code>威胁（Threats）</code>。</p>
+<p>  通过SWOT分析，可以帮助企业把资源和行动聚集在自己的强项和有最多机会的地方；并让企业的战略变得明朗。SWOT分析更多的用于企业战略指导，这里就不展开了。</p>
+<h3 id="pest分析模型🌟"><a class="header-anchor" href="#pest分析模型🌟"># </a><a href="https://wiki.mbalib.com/wiki/PEST%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B" target="_blank" rel="noopener">PEST分析模型</a>🌟</h3>
+<p>  <strong>PEST分析</strong>是战略咨询顾问用来帮助企业检阅其外部宏观环境的一种方法，一般用于对宏观环境对分析<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。对宏观宏观环境应诉做分析时，由于不同行业和企业有其自身特点和经营需要，分析的具体内容会有差异，但一般都对应以下四个方面</p>
+<ul>
+<li>Political(政治因素)</li>
+<li>Economic(经济因素)</li>
+<li>Social(社会因素)</li>
+<li>Techonlogical(技术因素)</li>
+</ul>
+<h4 id="政治法律环境-political-factors"><a class="header-anchor" href="#政治法律环境-political-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E6%94%BF%E6%B2%BB%E6%B3%95%E5%BE%8B%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">政治法律环境</a>(Political Factors)</h4>
+<p>  政治环境包括一个国家的<code>社会制度</code>，<code>执政党的性质</code>，<code>政府的方针</code>，<code>政策</code>和<code>法令</code>等。不同国家有着不同的社会性质，不同的社会制度对于组织活动有不同的限制和要求。即使是社会制度不变的同一国家，在不同时期，也会由于执政党的不同，其政府方针特点、政策倾向对组织活动态度和影响也是不同变化的.</p>
+<p>  一般考量政治环境的关键因素有以下指标</p>
+<ul>
+<li>政治体制</li>
+<li>经济体制</li>
+<li>财政政策</li>
+<li>税收政策</li>
+<li>产业政策</li>
+<li>投资政策</li>
+<li>国防开支水平</li>
+<li>政府补贴水平</li>
+<li>民众的政治参与度、等</li>
+</ul>
+<blockquote>
+<p>政治分析可参考的网站举例：</p>
+<ul>
+<li><a href="http://www.npc.gov.cn/npc/index.shtml" target="_blank" rel="noopener">中国人大网</a></li>
+<li><a href="http://www.gov.cn/index.htm" target="_blank" rel="noopener">中国中央政府网</a></li>
+<li>还有个地方的网站，不一一举例了。</li>
+</ul>
+</blockquote>
+<h4 id="经济环境-economic-factors"><a class="header-anchor" href="#经济环境-economic-factors"># </a>经济环境(Economic Factors)</h4>
+<p>  <a href="https://wiki.mbalib.com/wiki/%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">经济环境</a>分为宏观和微观两个方面。</p>
+<p>  <a href="https://wiki.mbalib.com/wiki/%E5%AE%8F%E8%A7%82%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">宏观经济环境</a>主要指一个国家的人口数量及其增长趋势，<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E6%94%B6%E5%85%A5" target="_blank" rel="noopener">国民收入</a>、<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E7%94%9F%E4%BA%A7%E6%80%BB%E5%80%BC" target="_blank" rel="noopener">国民生产总值</a>及其变化情况以及通过这些指标能够反映的<a href="https://wiki.mbalib.com/wiki/%E5%9B%BD%E6%B0%91%E7%BB%8F%E6%B5%8E" target="_blank" rel="noopener">国民经济</a><a href="https://wiki.mbalib.com/wiki/%E5%8F%91%E5%B1%95%E6%B0%B4%E5%B9%B3" target="_blank" rel="noopener">发展水平</a>和<a href="https://wiki.mbalib.com/wiki/%E5%8F%91%E5%B1%95%E9%80%9F%E5%BA%A6" target="_blank" rel="noopener">发展速度</a>。</p>
+<p>  <a href="https://wiki.mbalib.com/wiki/%E5%BE%AE%E8%A7%82%E7%BB%8F%E6%B5%8E%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">微观经济环境</a>主要指企业所在地区或所服务地区的消费者的收入水平、<a href="https://wiki.mbalib.com/wiki/%E6%B6%88%E8%B4%B9%E5%81%8F%E5%A5%BD" target="_blank" rel="noopener">消费偏好</a>、储蓄情况、就业程度等因素。这些因素直接决定着企业目前及未来的市场大小。</p>
+<p>分析经济环境的关键指标有：</p>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E5%9B%BD%E5%86%85%E7%94%9F%E4%BA%A7%E6%80%BB%E5%80%BC/31864?fromtitle=GDP&amp;fromid=41201" target="_blank" rel="noopener">国内生产总值</a>(GDP)及增长率</li>
+<li>进出口总额及增长率</li>
+<li>利率</li>
+<li>汇率</li>
+<li><a href="https://wiki.mbalib.com/wiki/%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80%E7%8E%87" target="_blank" rel="noopener">通货膨胀率</a></li>
+<li><a href="https://baike.baidu.com/item/%E6%B6%88%E8%B4%B9%E8%80%85%E7%89%A9%E4%BB%B7%E6%8C%87%E6%95%B0/9843779?fromtitle=CPI&amp;fromid=5561" target="_blank" rel="noopener">消费价格指数(CPI)</a></li>
+<li><a href="https://baike.baidu.com/item/%E4%BA%BA%E5%9D%87%E5%8F%AF%E6%94%AF%E9%85%8D%E6%94%B6%E5%85%A5?fromtitle=%E5%B1%85%E6%B0%91%E5%8F%AF%E6%94%AF%E9%85%8D%E6%94%B6%E5%85%A5&amp;fromid=843061" target="_blank" rel="noopener">居民可支配收入</a></li>
+<li><a href="https://wiki.mbalib.com/wiki/%E8%B4%A7%E5%B8%81" target="_blank" rel="noopener">货币</a>与<a href="https://wiki.mbalib.com/wiki/%E8%B4%A2%E6%94%BF%E6%94%BF%E7%AD%96" target="_blank" rel="noopener">财政政策</a></li>
+<li>失业率与失业趋势</li>
+<li><a href="https://wiki.mbalib.com/wiki/%E8%AF%81%E5%88%B8%E5%B8%82%E5%9C%BA" target="_blank" rel="noopener">证券市场</a>状况</li>
+<li>价格波动</li>
+<li>劳动生产率、等</li>
+</ul>
+<blockquote>
+<p>数据参考网站：</p>
+<p><a href="http://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局</a></p>
+</blockquote>
+<h4 id="社会文化环境-sociocultural-factors"><a class="header-anchor" href="#社会文化环境-sociocultural-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E7%A4%BE%E4%BC%9A%E6%96%87%E5%8C%96%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">社会文化环境</a>(Sociocultural Factors)</h4>
+<p>  社会环境包括一个国家或地区的居民教育程度水平、道德水平、宗教信仰，风俗习惯、审美观点、价值观念、<a href="https://baike.baidu.com/item/%E4%BA%BA%E5%8F%A3%E5%8F%98%E5%8A%A8" target="_blank" rel="noopener">人口变动</a>趋势等。</p>
+<p>  文化水平会影响居民的需求层次；宗教信仰和风俗习惯会禁止或抵制某些活动的进行；<a href="https://wiki.mbalib.com/wiki/%E4%BB%B7%E5%80%BC%E8%A7%82%E5%BF%B5" target="_blank" rel="noopener">价值观念</a>会影响居民对<a href="https://wiki.mbalib.com/wiki/%E7%BB%84%E7%BB%87%E7%9B%AE%E6%A0%87" target="_blank" rel="noopener">组织目标</a>、组织活动以及组织存在本身的认可与否；审美观点则会影响人们对组织活动内容、活动方式以及活动成果的态度。</p>
+<p> 　　<strong>关键的社会文化因素：</strong></p>
+<ul>
+<li>妇女生育率</li>
+<li>人口结构比例</li>
+<li>性别比例</li>
+<li>出生率死亡率</li>
+<li>人口移进移出率</li>
+<li>种族结构</li>
+<li>社会保障计划</li>
+<li>人口预期寿命</li>
+<li>人均收入</li>
+<li>生活方式</li>
+<li>平均教育状况</li>
+<li>城市、城镇和农村的人口变化</li>
+<li>宗教信仰状况等</li>
+</ul>
+<h4 id="技术环境-technological-factors"><a class="header-anchor" href="#技术环境-technological-factors"># </a><a href="https://wiki.mbalib.com/wiki/%E6%8A%80%E6%9C%AF%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">技术环境</a>(Technological Factors)</h4>
+<p>技术环境除了要考察与企业所处领域的活动直接相关的技术手段的发展变化外，还应及时了解：</p>
+<ol>
+<li>
+<p>国家对科技开发的投资和支持重点；</p>
+</li>
+<li>
+<p>该领域技术发展动态和研究开发费用总额；</p>
+</li>
+<li>
+<p><a href="https://wiki.mbalib.com/wiki/%E6%8A%80%E6%9C%AF%E8%BD%AC%E7%A7%BB" target="_blank" rel="noopener">技术转移</a>和技术<a href="https://wiki.mbalib.com/wiki/%E5%95%86%E5%93%81%E5%8C%96" target="_blank" rel="noopener">商品化</a>速度；</p>
+</li>
+<li>
+<p>专利及其保护情况，等等。</p>
+</li>
+</ol>
+<p>分析科技因素的指标有：</p>
+<ul>
+<li>新技术的发明和发展</li>
+<li>技术更新速度</li>
+<li>技术传播速度</li>
+<li>技术商品化速度</li>
+<li>国家重点支持项目、国家投入研发费用</li>
+<li>专利个数和保护情况、等</li>
+</ul>
+<blockquote>
+<p>数据参考网站：</p>
+<p><a href="http://epub.sipo.gov.cn/" target="_blank" rel="noopener">中国专利公布公告网</a></p>
+<p><a href="http://www.stats.gov.cn/" target="_blank" rel="noopener">国家统计局</a></p>
+<p><a href="http://www.pss-system.gov.cn/" target="_blank" rel="noopener">专利检索及分析网</a></p>
+<p><a href="http://chinaip.sipo.gov.cn/" target="_blank" rel="noopener">国家重点产业专利信息服务平台</a></p>
+</blockquote>
+<p><a href="https://wiki.mbalib.com/wiki/PEST%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B#PEST.E5.88.86.E6.9E.90.E6.A8.A1.E5.9E.8B.E6.A1.88.E4.BE.8B.E5.88.86.E6.9E.90" target="_blank" rel="noopener">点击查看分析案例</a></p>
+<h3 id="5w2h🌟"><a class="header-anchor" href="#5w2h🌟"># </a>5W2H🌟</h3>
+<p>  5W2H模型能简单，方便，易于理解，广泛用于企业营销、活动管理产品分析等，对于决策和执行性的活动措施也非常有帮助，也有助于弥补考虑问题的疏漏。</p>
+<p>WHY——为什么？为什么要这么做？理由何在？原因是什么？</p>
+<ul>
+<li>WHAT——是什么？目的是什么？做什么工作？</li>
+<li>WHO——谁？由谁来承担？谁来完成？谁负责？</li>
+<li>WHEN——何时？什么时间完成？什么时机最适宜？</li>
+<li>WHERE——何处？在哪里做？从哪里入手？</li>
+<li>HOW——怎么做？如何提高效率？如何实施？方法怎样？</li>
+<li>HOW MUCH——多少？做到什么程度？数量如何？质量水平如何？费用产出如何？</li>
+</ul>
+<blockquote>
+<p>案例：</p>
+</blockquote>
+<p><img src="/assets/dataanalysis/0/5W2H%E6%A1%88%E4%BE%8B.jpg" alt></p>
+<h3 id="时间管理模型-time-management"><a class="header-anchor" href="#时间管理模型-time-management"># </a>时间管理模型（Time Management）</h3>
+<p>  时间管理常常用于工作安排和自我管理，和数据分析管理不大，这里只做补充说明。时间管理的目的是为了决定什么事该做，什么事不该做，从而有效地运用时间，降低变动性。这里列举了两个</p>
+<h4 id="时间-四象限-法"><a class="header-anchor" href="#时间-四象限-法"># </a>时间“四象限”法</h4>
+<p>  著名管理学家科维提出的一个时间管理的理论，把工作按照重要和紧急两个不同的程度进行了划分，基本上可以分为四个“象限”：</p>
+<ul>
+<li>既紧急又重要（如<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E4%BA%8B%E5%8D%B1%E6%9C%BA" target="_blank" rel="noopener">人事危机</a>、<a href="https://wiki.mbalib.com/wiki/%E5%AE%A2%E6%88%B7%E6%8A%95%E8%AF%89" target="_blank" rel="noopener">客户投诉</a>、即将到期的任务、<a href="https://wiki.mbalib.com/wiki/%E8%B4%A2%E5%8A%A1%E5%8D%B1%E6%9C%BA" target="_blank" rel="noopener">财务危机</a>等）</li>
+<li>重要但不紧急（如建立<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E9%99%85%E5%85%B3%E7%B3%BB" target="_blank" rel="noopener">人际关系</a>、新的机会、<a href="https://wiki.mbalib.com/wiki/%E4%BA%BA%E5%91%98%E5%9F%B9%E8%AE%AD" target="_blank" rel="noopener">人员培训</a>、制订防范措施等）</li>
+<li>紧急但不重要（如电话铃声、不速之客、<a href="https://wiki.mbalib.com/wiki/%E8%A1%8C%E6%94%BF%E6%A3%80%E6%9F%A5" target="_blank" rel="noopener">行政检查</a>、主管部门会议等）</li>
+<li>既不紧急也不重要（如客套的闲谈、无聊的信件、个人的爱好等）。</li>
+</ul>
+<p><img src="https://wiki.mbalib.com/w/images/a/a0/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86.png" alt></p>
+<ol>
+<li>
+<p>对重要和紧急的事情当然是立即就做</p>
+</li>
+<li>
+<p>而对不重要不紧急的事情不做</p>
+</li>
+<li>
+<p>平时多做重要但不紧急的事情，（因为这是第二象限，常常被称为第二象限工作法）</p>
+</li>
+<li>
+<p>对紧急但不重要的事情选择做。</p>
+</li>
+</ol>
+<h4 id="计划管理"><a class="header-anchor" href="#计划管理"># </a>计划管理</h4>
+<p>  关于计划，有日计划、周计划、月计划、季度计划、年度计划。时间管理的重点是待办单、日计划、周计划、月计划。</p>
+<ul>
+<li>待办单：将你每日要做的一些工作事先列出一份清单，排出优先次序，确认完成时间，以突出工作重点。要避免遗忘就要避免半途而废，尽可能做到，今日事今日毕。</li>
+<li>待办单主要包括的内容：非日常工作、特殊事项、行动计划中的工作、昨日未完成的事项等。</li>
+<li>待办单的使用注意：每天在固定时间制定待办单（一上班就做）、只制定一张待办单、完成一项工作划掉一项、待办单要为应付紧急情况留出时间、最关键的一项，每天坚持。</li>
+<li>每年年末作出下一年度工作规划； 每季季末作出下季末工作规划；每月月末作出下月工作计划；每周周末作出下周工作计划</li>
+</ul>
+<blockquote>
+<p>其他时间管理理论：<a href="https://wiki.mbalib.com/wiki/Category:%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86" target="_blank" rel="noopener">点击查看</a></p>
+</blockquote>
+<h3 id="逻辑树分析法🌟"><a class="header-anchor" href="#逻辑树分析法🌟"># </a>逻辑树分析法🌟</h3>
+<p>  逻辑树又称问题树、演绎树或分解树等。<a href="https://wiki.mbalib.com/wiki/%E9%BA%A6%E8%82%AF%E9%94%A1" target="_blank" rel="noopener">麦肯锡</a>分析问题最常使用的工具就是“逻辑树”。逻辑树是将问题的所有子问题分层罗列，从最高层开始，并逐步向下扩展。</p>
+<blockquote>
+<p>逻辑树分析法特点</p>
+</blockquote>
+<p><img src="/assets/dataanalysis/0/%E9%80%BB%E8%BE%91%E6%A0%91%E5%88%86%E6%9E%90%E6%B3%95%E7%89%B9%E7%82%B9.gif" alt></p>
+<blockquote>
+<p>逻辑树种类</p>
+</blockquote>
+<p><img src="/assets/dataanalysis/0/%E9%80%BB%E8%BE%91%E6%A0%91%E7%A7%8D%E7%B1%BB.gif" alt></p>
+<blockquote>
+<p>逻辑树分析法举例</p>
+<p>案例来源：小明学数据–<a href="https://zhuanlan.zhihu.com/p/35933899" target="_blank" rel="noopener">数据分析基础—2.2.3 逻辑树分析法</a></p>
+</blockquote>
+<h4 id="提出问题-问题树"><a class="header-anchor" href="#提出问题-问题树"># </a>提出问题(问题树)</h4>
+<p>  在运用逻辑树时，首先可由左至右画出树状图，最左边是已知问题，即思考的目标问题——树干，其次再思考造成问题的原因，作出第一层原因——树枝，当第一层原因浮现后，可针对个别原因再深入细究，依次是第二层原因、第三层…，逐层递推,逐渐有抽象转化为具体的可分析的问题。</p>
+<p><img src="/assets/dataanalysis/0/%E9%97%AE%E9%A2%98%E6%A0%91.jpg" alt></p>
+<h4 id="解决问题-方法树"><a class="header-anchor" href="#解决问题-方法树"># </a>解决问题(方法树)</h4>
+<p>  在以逻辑树追究出问题的原因之后，接下来就以分析的结果做为依据，思考具体的解决方案。这个过程可以借助解决问题的逻辑树达成，做法上也与追究原因类似：首先最左边是思考的主题也就是已知问题——树干，之后则是已知问题有几种解决方案，即第一层树枝，然后再深入分析提出第二层解决方案，一步步深入到具体可执行的方法（smart原则）。</p>
+<p><img src="/assets/dataanalysis/0/%E6%96%B9%E6%B3%95%E6%A0%91.jpg" alt></p>
+<h3 id="金字塔模型"><a class="header-anchor" href="#金字塔模型"># </a>金字塔模型</h3>
+<p>  http://www.woshipm.com/operate/2586618.html</p>
+<p>http://www.woshipm.com/operate/1294732.html</p>
+<h3 id="smart原则"><a class="header-anchor" href="#smart原则"># </a>SMART原则</h3>
+<p>  smart原则常用于目标管理，是最常用的管理理论之一，和数据分析关系不是很大，此处用作补充说明。目标管理是使经理的工作变被动为主动的一个很好的手段，实施目标管理不但是有利于员工更加明确高效地工作，更是为了未来的绩效考核制定了目标和考核标准，使考核更加科学化、规范化，更能保证考核的公开、公平与公正。毕竟，没有目标你是无法考核员工的。原则如下：</p>
+<ul>
+<li>S代表具体(Specific)，指目标要切中特定的工作指标，不能笼统；</li>
+<li>M代表可衡量的(Measurable)，指目标是数量化或者行为化的，验证这些绩效指标的数据或者信息是可以获得的；</li>
+<li>A代表可实现(Attainable)，指目标 在付出努力的情况下可以实现，避免设立过高或过低的目标；</li>
+<li>R代表是相关的(Relevant)，指目标是与总体目标是有关的；</li>
+<li>T代表有时限(Time bound)，注重完成目标的特定期限；</li>
+</ul>
+<blockquote>
+<p>具体资料案例可<a href="https://wiki.mbalib.com/wiki/SMART%E5%8E%9F%E5%88%99" target="_blank" rel="noopener">点击链接</a>查阅</p>
+</blockquote>
+<h2 id="常见的数据分析场景"><a class="header-anchor" href="#常见的数据分析场景"># </a>常见的数据分析场景</h2>
+<ul>
+<li>
+<p>运营</p>
+<ul>
+<li>活动运营</li>
+<li>内容运营</li>
+<li>商品运营</li>
+<li>用户运营
+<ul>
+<li>用户分类</li>
+<li>用户生命周期</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>产品</p>
+<ul>
+<li>产品功能</li>
+<li>产品体验</li>
+<li>产品调研</li>
+<li>用户需求调研</li>
+</ul>
+</li>
+<li>
+<p>市场</p>
+<ul>
+<li>商务合作效果</li>
+<li>渠道推广效果</li>
+<li>投入产出比</li>
+</ul>
+<h2 id="列举几个数据模型"><a class="header-anchor" href="#列举几个数据模型"># </a>列举几个数据模型</h2>
+<h3 id="qq模型"><a class="header-anchor" href="#qq模型"># </a>QQ模型</h3>
+<p> QQ模型常常用于分析某一时间内某一产品的的反馈效果，用于评估一个产品是否有效，及时发现问题所在，并做好相应对策的，常用于互联网产品的分析。</p>
+<p>quantity数量（绝对数）</p>
+<ul>
+<li>用户数</li>
+<li>浏览量</li>
+<li>点击量</li>
+</ul>
+<p>quality：质量（相对数）</p>
+<ul>
+<li>留存率</li>
+<li>转化率</li>
+<li>参与率</li>
+</ul>
+<blockquote>
+<p>案例</p>
+</blockquote>
+<p><img src="http://note.youdao.com/yws/res/10957/WEBRESOURCEfbbe868944aa8033c62397881a56845e" alt="20191104125218.jpg"></p>
+</li>
+</ul>
+<h2 id="aarrr模型"><a class="header-anchor" href="#aarrr模型"># </a>AARRR模型</h2>
+<p>AARRR是Acquisition、Activation、Retention、Revenue、Refer，这个五个单词的缩写，分别对应用户生命周期中的5个重要环节。</p>
+<ol>
+<li>Acquisition 用户获取
+<ul>
+<li>用户获取成本=（营销费用+销售费用)/同时期新增用户数</li>
+<li>用户来源渠道：渠道新用户数、驱动用户占比、渠道成本</li>
+</ul>
+</li>
+<li>Activation 用户激活
+<ul>
+<li>定义用户行为、用户激活率、激活漏斗转化率</li>
+</ul>
+</li>
+<li>Retention 用户留存
+<ul>
+<li>用户生命周期、用户留存率、不同用户分组留存率</li>
+</ul>
+</li>
+<li>Revenue 收入
+<ul>
+<li>付费用户数、付费用户占比，平均付费金额</li>
+</ul>
+</li>
+<li>Refer 推荐
+<ul>
+<li>推荐用户数</li>
+<li>推荐转化率</li>
+<li>被推荐转化率</li>
+</ul>
+</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>宏观环境又称为一般环境，是指影响一切行业和企业的各种宏观力量 <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>孙小丢
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sunxz007.github.io/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/" title="数据分析第一步--明确分析目的和思路">https://sunxz007.github.io/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> 基础</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数据分析</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/note/dataanalysis/2.%E6%95%B0%E6%8D%AE%E6%94%B6%E9%9B%86/" rel="prev" title="数据分析第二步--数据收集">
+                  数据分析第二步--数据收集 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-livere">livere</a></li>
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane livere" id="comment-livere">
+              
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NzYwMi8yNDEwMg=="></div>
+  </div>
+  
+            </div>
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="comments"></div>
+            </div>
+        </div>
+      </div>
+      <script>
+        window.addEventListener('tabs:register', () => {
+          let activeClass = 'valine';
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          if (activeClass) {
+            let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+            if (activeTab) {
+              activeTab.click();
+            }
+          }
+        });
+        window.addEventListener('tabs:click', event => {
+          let commentClass = event.target.classList[1];
+          localStorage.setItem('comments_active', commentClass);
+        });
+      </script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的分析方法论"><span class="nav-text"># 常见的分析方法论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4p理论模型🌟"><span class="nav-text"># 4P理论模型🌟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#产品-product"><span class="nav-text"># 产品(Product)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#价格-price-："><span class="nav-text"># 价格(Price)：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#渠道-place"><span class="nav-text"># 渠道(Place)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#促销-promotion"><span class="nav-text"># 促销(Promotion)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户使用行为模型🌟"><span class="nav-text"># 用户使用行为模型🌟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stp理论-市场-目标-定位"><span class="nav-text"># STP理论(市场|目标|定位)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swot分析法"><span class="nav-text"># SWOT分析法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pest分析模型🌟"><span class="nav-text"># PEST分析模型🌟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#政治法律环境-political-factors"><span class="nav-text"># 政治法律环境(Political Factors)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#经济环境-economic-factors"><span class="nav-text"># 经济环境(Economic Factors)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#社会文化环境-sociocultural-factors"><span class="nav-text"># 社会文化环境(Sociocultural Factors)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#技术环境-technological-factors"><span class="nav-text"># 技术环境(Technological Factors)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5w2h🌟"><span class="nav-text"># 5W2H🌟</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间管理模型-time-management"><span class="nav-text"># 时间管理模型（Time Management）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#时间-四象限-法"><span class="nav-text"># 时间“四象限”法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计划管理"><span class="nav-text"># 计划管理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑树分析法🌟"><span class="nav-text"># 逻辑树分析法🌟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#提出问题-问题树"><span class="nav-text"># 提出问题(问题树)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-方法树"><span class="nav-text"># 解决问题(方法树)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#金字塔模型"><span class="nav-text"># 金字塔模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#smart原则"><span class="nav-text"># SMART原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见的数据分析场景"><span class="nav-text"># 常见的数据分析场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列举几个数据模型"><span class="nav-text"># 列举几个数据模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#qq模型"><span class="nav-text"># QQ模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aarrr模型"><span class="nav-text"># AARRR模型</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="孙小丢"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">孙小丢</p>
+  <div class="site-description" itemprop="description">Good Good Study！Day Day Up！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Sunxz007" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Sunxz007" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/977622085@qq.com" title="E-Mail → 977622085@qq.com"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/sun931203" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;sun931203" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <style>
+      .custom-banner{background-attachment: fixed;
+      background-position: center bottom;
+      padding: 40px 0;
+      margin-bottom: 40px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-color: rgba(0,0,0,0.3);
+      background-image: url(/images/sea.jpg);
+      background-blend-mode: darken;
+      }
+      .custom-banner h1 {
+      text-align: center;
+      color: #fff;
+      font-family: fira code,consolas,Menlo,pingfang sc,microsoft yahei,monospace;
+      font-style: italic;
+      font-weight: 400;
+      }
+      </style>
+      <div class="custom-banner">
+        <h1>Stay hungary,Stay foolish.</h1>
+      </div>
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">孙小丢</span>
+      <br/>
+      <span class="post-meta-item-icon">
+        <i class="fa fa-map" aria-hidden="true"></i>
+      </span>
+      <span class="post-meta-item-text">站点地图:</span> 
+      <a href="/sitemap.xml" style="color:#999">Google</a>/<a href="/baidusitemap.xml" style="color:#999">百度</a>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">32k</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.getAttribute('pjax') !== null) {
+      element.setAttribute('pjax', '');
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+  <script pjax>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'dark',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+    <div id="pjax">
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'https://sunxz007.github.io/note/dataanalysis/1.%E6%98%8E%E7%A1%AE%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84%E5%92%8C%E6%80%9D%E8%B7%AF/',]
+      });
+      });
+  </script>
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+<div id="needsharebutton-float">
+      <span class="btn">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </span>
+    </div>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      flOptions = {};
+        flOptions.iconStyle = "default";
+        flOptions.boxForm = "vertical";
+        flOptions.position = "topCenter";
+        flOptions.networks = "Weibo,Wechat,Douban,Twitter,Facebook,Linkedin,GooglePlus,GoogleBookmarks,Evernote";
+      new needShareButton('#needsharebutton-float', flOptions);
+  </script>
+
+<script>
+NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'JmkyYGuszFYPB3Hb4vnIVS9u-gzGzoHsz',
+    appKey: 'wu7SUP1saOKsN7jHyEM4G4FD',
+    placeholder: "Just go go",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: 'zh-cn' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+    </div>
+</body>
+</html>
